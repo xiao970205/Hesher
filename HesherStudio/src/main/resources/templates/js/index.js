@@ -48,6 +48,15 @@ $(function(){
 	$("#showHesher_left_down").click(function(){
 		window.open("https://space.bilibili.com/3113010?from=search&seid=11722697212181282065");
 	});
+	$("#showMasterTeacherUpLeft").click(function(){
+		alert("跳转到优秀教师left");
+	});
+	$("#showMasterTeacherUpRight").click(function(){
+		alert("跳转到优秀教师right");
+	});
+	$("#showMasterTeacherMore").click(function(){
+		alert("跳转到展示更多优秀教师");
+	});
 	var menuBtn = $('#head_top_left_menu');
  	var oAside = $('#menu');
  	menuBtn.on("click",function(){
@@ -90,7 +99,6 @@ $(document).ready(function(){
     },function(){
   		$("#head_top_right_youku").animate({opacity:'1.0'},200);
   });
-  
   $("#showHesher_left_down").hover(function(){
   		$("#showHesher_left_down").animate({opacity:'0.5'},200);
     },function(){
@@ -100,6 +108,21 @@ $(document).ready(function(){
   		$("#showHesher_right_down").animate({opacity:'0.5'},200);
     },function(){
   		$("#showHesher_right_down").animate({opacity:'1.0'},200);
+  });
+  $("#showMasterTeacherUpLeft").hover(function(){
+  		$("#showMasterTeacherUpLeft").animate({opacity:'0.5'},200);
+    },function(){
+  		$("#showMasterTeacherUpLeft").animate({opacity:'1.0'},200);
+  });
+  $("#showMasterTeacherUpRight").hover(function(){
+  		$("#showMasterTeacherUpRight").animate({opacity:'0.5'},200);
+    },function(){
+  		$("#showMasterTeacherUpRight").animate({opacity:'1.0'},200);
+  });
+  $("#showMasterTeacherDown").hover(function(){
+  		$("#showMasterTeacherMore").animate({opacity:'0.5'},200);
+    },function(){
+  		$("#showMasterTeacherMore").animate({opacity:'1.0'},200);
   });
 });
 function instrumentTeaching(){
