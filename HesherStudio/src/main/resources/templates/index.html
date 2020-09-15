@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/index.css" type="text/css" />
+<link rel="stylesheet" href = "css/index_weChat_img.css" type = "text/css"/>
 <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/index_weChat_img.js"></script>
 <script type="text/javascript">
 	
 </script>
@@ -33,6 +35,12 @@
 						<div id="head_top_right_weibo"></div>
 						<div id="head_top_right_youku"></div>
 						<div id="head_top_right_text">FOLLOW US :</div>
+						<!-- 微信弹出照片 -->
+						<div id ="weChatModel" class = "weChatModel">
+							<span class = "weChatclose" onclick="closeWeChatPic()">&times;</span>
+							<img class = "weChatModal-content" id = "weChatImg" src="pic/weChatImg.jpg">
+							<div id = "weChatInfo">微信二维码</div>
+						</div>
 					</div>
 				</div>
 				<div style="width: 100%; height: 1px; background-color: #777A7B"></div>
@@ -131,7 +139,11 @@
 			</div>
 		</div>
 		<div id="foot">
-			<div id="foot_top"></div>
+			<div id="foot_top">
+				<div id = "foot_top_top">
+					<div style="background-image: url('pic/jumpToTop.png');background-size: cover;width:8%;height:100%;margin:0 auto;"></div>
+				</div>
+			</div>
 			<div id="foot_down">
 				<p
 					style="width: 640px; color: #888; font-size: 10px; padding-top: 60px; margin: 0 auto;">Copyright

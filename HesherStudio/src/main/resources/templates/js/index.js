@@ -1,4 +1,5 @@
 var opacityValue = 0;
+
 $(window).scroll(function() {
   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   if(scrollTop>$("#main_1").height()){
@@ -29,18 +30,21 @@ function changeOpacity(){
   	}
   	$("#head_top").css("background-color","rgba(0,0,0,"+opacity+")");
 }
+
+
+
 $(function(){
 	$("#head_top_center_center").click(function(){
 		alert("主页跳转");
 	});
 	$("#head_top_right_wechat").click(function(){
-		alert("微信链接");
+		document.getElementById('weChatModel').style.display = "block";
 	});
 	$("#head_top_right_weibo").click(function(){
 		window.open("https://weibo.com/Pantrick?is_all=1");
 	});
 	$("#head_top_right_youku").click(function(){
-		alert("优酷链接");
+		window.open("https://space.bilibili.com/3113010?from=search&seid=11722697212181282065");
 	});
 	$("#showHesher_right_down").click(function(){
 		window.open("https://weibo.com/Pantrick?is_all=1");
@@ -56,6 +60,9 @@ $(function(){
 	});
 	$("#showMasterTeacherMore").click(function(){
 		alert("跳转到展示更多优秀教师");
+	});
+	$("#foot_top_top").click(function(){
+		$("html,body").animate({scrollTop:0},500);
 	});
 	var menuBtn = $('#head_top_left_menu');
  	var oAside = $('#menu');
@@ -123,6 +130,11 @@ $(document).ready(function(){
   		$("#showMasterTeacherMore").animate({opacity:'0.5'},200);
     },function(){
   		$("#showMasterTeacherMore").animate({opacity:'1.0'},200);
+  });
+  $("#foot_top_top").hover(function(){
+  		$("#foot_top_top").animate({opacity:'0.3'},200);
+    },function(){
+  		$("#foot_top_top").animate({opacity:'0.5'},200);
   });
 });
 function instrumentTeaching(){
