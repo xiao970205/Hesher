@@ -1,0 +1,360 @@
+#head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 2;
+}
+
+#head_top {
+    width: 100%;
+    height: 103px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#head_down {
+    display: none;
+    width: 100%;
+    height: 25px;
+    border-bottom: 1px solid rgb(119, 122, 123);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-align: center;
+}
+
+#head_top_left {
+    display: none;
+    padding-top: 30px;
+    width: 160px;
+    height: 40px;
+    float: left;
+}
+
+#logo_div {
+    display: none;
+    float: left;
+    height: 100%;
+    width: calc(100% - 394px);
+}
+
+#head_top_logo {
+    background: url("../pic/logo1_1.png") no-repeat;
+    background-size: cover;
+    height: 104px;
+    width: 170px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#header-content-left-in {
+    width: 40px;
+    height: 40px;
+    padding-left: 40px;
+}
+
+#header-content-left-in-in {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#header-content-left-in-in-in {
+    margin-left: 5px;
+    margin-bottom: 7px;
+    bottom: 0px;
+    width: 27px;
+    height: 18px;
+}
+
+#header-menu-text {
+    width: 40px;
+    height: 6px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+#header-content-left-in-in-in-top {
+    width: 27px;
+    height: 6px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-top: 2px solid rgb(255, 255, 255);
+}
+
+#header-content-left-in-in-in-bottom {
+    width: 27px;
+    height: 6px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+#head-content-right {
+    float: right;
+    width: 234px;
+    height: 66px;
+}
+
+#pos_relative {
+    width: 234px;
+    height: 66px;
+}
+
+#header-content-right-sp {
+    display: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#double_corcle {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    margin-bottom: 7px;
+    border: 2px solid white;
+    border-radius: 25px
+}
+
+#header_share_text {
+    width: 40px;
+    height: 12px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+#header-content-right-wrap {
+    display: none;
+    padding-top: 40px;
+    width: 234px;
+    height: 26px;
+}
+
+#follow-us-text {
+    float: left;
+    padding-right: 10px;
+    width: 86px;
+    height: 26px;
+    color: white;
+    font-size: 13px;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+}
+
+.little_pic {
+    float: left;
+    width: 26px;
+    height: 26px;
+    margin-right: 20px;
+}
+
+#bilibili_logo {
+    background: url("../pic/bilibililogo.png") no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#wechat_logo {
+    background: url("../pic/wechat.png") no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#weibo_logo {
+    background: url("../pic/weibo.png") no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+
+@charset "UTF-8";
+.weChatModel {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+.weChatModal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#weChatInfo {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* 添加动画 */
+.weChatModal-content, #weChatInfo {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+.weChatclose {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.weChatclose:hover,
+.weChatclose:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 小屏幕中图片宽度为 100% */
+@media only screen and (max-width: 700px) {
+    .weChatModal-content {
+        width: 100%;
+    }
+}
+
+.header-nav-in {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 1;
+    color: white;
+    text-decoration: none;
+    border-left: 1px solid rgb(255, 255, 255);
+}
+
+#header-nav-in-end {
+    border-right: 1px solid rgb(255, 255, 255);
+}
+
+.top_a:link {
+    text-decoration: none;
+    color: white;
+}
+
+.top_a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.menu_kip_1 {
+    background-color: rgba(255, 255, 255, 0.0);
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    padding-top: 18px;
+    padding-left: 18px;
+    cursor: pointer;
+}
+
+.menu_kip_2 {
+    background-color: rgba(255, 255, 255, 0.0);
+    height: 50px;
+    font-size: 20px;
+    padding-top: 18px;
+    padding-left: 18px;
+    cursor: pointer;
+    display: none;
+}
+
+#left_menu_0{
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    transform: translateX(-100vw);
+    transition: transform 0.5s;
+    overflow-y: auto;
+}
+#left_menu_web{
+    padding-top: 104px;
+    width: 100%;
+    height: 100%;
+}
+
+.left_menu_web_style{
+    width: 27vw;
+    height: 100%;
+    float: left;
+    transition-property: background;
+    transition-duration: 0.5s;
+}
+.left_menu_web_box_style{
+    width: auto;
+    height: 50px;
+    padding-top: 18px;
+    padding-left: 18px;
+    color: white;
+    font-size: 20px;
+    transition-property: background;
+    transition-duration: 0.5s;
+    -moz-transition-property: background;
+    -moz-transition-duration: 0.5s;
+    -o-transition-property: background;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 0.5s;
+    cursor: pointer;
+}
+.left_menu_web_box_style:hover {
+    background: rgba(255,255,255,0.5);
+}
+
+#left_menu_moble{
+    width: 100vw;
+    height: 100vh;
+}
+#left_menu_moble_0{
+    width: 100vw;
+    height: auto;
+    padding-top: 80px;
+}
+
+.left_menu_moble_style{
+    width: 100vw;
+    height: 58px;
+    border-bottom: 1px solid rgb(77,77,77);
+    transition-property: height;
+    transition-duration: 0.5s;
+}

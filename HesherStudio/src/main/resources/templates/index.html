@@ -1,156 +1,277 @@
-<!DOCTYPE html>
-<html id="a">
+<html style="overflow-x: hidden;overflow-y: auto">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="css/index.css" type="text/css" />
-<link rel="stylesheet" href = "css/index_weChat_img.css" type = "text/css"/>
-<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="js/index_weChat_img.js"></script>
-<script type="text/javascript">
-	
-</script>
-</head>
-<body style="margin: 0px 0px 0px 0px">
-	<div>
-		<header id="head">
-			<div>
-				<div id="head_top">
-					<div id="head_top_left">
-						<div id="head_top_left_menu">
-							<div id="head_top_left_menu_pic"></div>
-							<div id="head_top_left_menu_text">MENU</div>
-						</div>
-						<div id="head_top_left_search">
-							<div id="head_top_left_search_pic"></div>
-							<div id="head_top_left_menu_text">SEARCH</div>
-						</div>
-					</div>
-					<div id="head_top_center">
-						<div id="head_top_center_center"></div>
-					</div>
-					<div id="head_top_right">
-						<div id="head_top_right_wechat"></div>
-						<div id="head_top_right_weibo"></div>
-						<div id="head_top_right_youku"></div>
-						<div id="head_top_right_text">FOLLOW US :</div>
-						<!-- 微信弹出照片 -->
-						<div id ="weChatModel" class = "weChatModel">
-							<span class = "weChatclose" onclick="closeWeChatPic()">&times;</span>
-							<img class = "weChatModal-content" id = "weChatImg" src="pic/weChatImg.jpg">
-							<div id = "weChatInfo">微信二维码</div>
-						</div>
-					</div>
-				</div>
-				<div style="width: 100%; height: 1px; background-color: #777A7B"></div>
-			</div>
-			<div id="head_down_main">
-				<div id="head_down">
-					<div id="head_down_center">
-						<div class="head_down_center_text">
-							<a href="javascript:void(0)" onclick="instrumentTeaching()">乐器教学</a>
-						</div>
-						<div class="head_down_center_text">
-							<a href="javascript:void(0)" onclick="undertakePerformance()">演出承接</a>
-						</div>
-						<div class="head_down_center_text"
-							id="head_down_center_text_right">
-							<a href="javascript:void(0)" onclick="shortVideoOperation()">短视频运营</a>
-						</div>
-					</div>
-				</div>
-				<div style="width: 100%; height: 1px; background-color: #777A7B"></div>
-			</div>
-		</header>
-		<aside id="menu" class="aside">
-			<div class="menuleftContent"></div>
-		</aside>
-		<aside id="search" class="aside">
-			<div class="menuleftContent"></div>
-		</aside>
-		<div id="main">
-			<div id="main_1">
-				<img style="width: 100%" src="pic/rotating-banner-rg5170gsvf.jpg">
-			</div>
-			<div id="main_teaching">
-				<div id="main_teaching_top"></div>
-				<div id="main_teaching_down"></div>
-			</div>
+    <title>Hesher Studio 海涩文化</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="css/Hesher_Header.css" type="text/css"/>
+    <link rel="stylesheet" href="css/Hesher_Bottom.css" type="text/css">
+    <link rel="stylesheet" href="css/Hesher_Address.css" type="text/css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+    <link href="css/index_moble.css" rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)">
+    <link href="css/index.css" rel="stylesheet" type="text/css" media="screen and (min-width: 1024px)">
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/Hesher_Head.js"></script>
+    <script type="text/javascript" src="js/Hesher_Bottom.js"></script>
+    <script type="text/javascript" src="js/Hesher_Address.js"></script>
+    <style>
+        body {
+            font-size: 62.5%;
+            font-family: "Microsoft YaHei", Arial;
+            overflow-x: hidden;
+            overflow-y: auto;
+            z-index: 0;
+        }
 
-			<div>
-				<img style="width: 100%" src="pic/rotating-banner-rg5170gsvf.jpg">
-			</div>
-		</div>
-		<div style="width: 100%; position: relative" id="showMasterTeacher">
-			<h3 id="headLineMasterTeacher">优秀教师</h3>
-			<div style="width: 100%; height: 50vw;">
-				<div style="width: 100%; height:100%;z-index: 1; position: absolute" id="showMasterTeacherUp">
-					<div id="showMasterTeacherUpLeft">
-						<div class = "showMasterTeacherLine2">
-							<hr style="float:left;width:3vw;size: 1;padding: 0px 0px 0px 0px;margin: 20px 0px 0px 0px;">
-							<font style="float:left">Hesher老师</font>
-						</div>
-					</div>
-					<div id="showMasterTeacherUpRight">
-						<div class = "showMasterTeacherLine2">
-							<hr style="float:left;width:3vw;size: 1;padding: 0px 0px 0px 0px;margin: 20px 0px 0px 0px;">
-							<font style="float:left">李老师</font>
-						</div>
-					</div>
-				</div>
-				<div id="showMasterTeacherDown">
-					<div id="showMasterTeacherMore" style="color:white;font-size: 16px;position: absolute;
-				left: 50%;
-				top: 50%;
-				transform: translate(-50%, -50%);">查看更多</div>
-				</div>
-			</div>
-		</div>
-		<div id="showHesher">
-			<div class="showHesher_page" id="showHesher_left">
-				<div id="showHesher_left_top">
-					<div style="width: 100%; height: 15%"></div>
-					<font class="HesherName">Hesher&nbsp;&nbsp;&nbsp;&nbsp;</font><font
-						class="video_font">bilibili</font>
-					<div
-						style="width: 80%; height: 70%; background-color: white; margin: 0 auto;">
-						<iframe
-							src="http://player.bilibili.com/player.html?aid=81427197&bvid=BV1EJ411h7vg&cid=139354407&page=1"
-							style="width: 100%; height: 100%" scrolling="no" border="0"
-							frameborder="no" framespacing="0" allowfullscreen="true">
-						</iframe>
-					</div>
-				</div>
-				<div id="showHesher_left_down">查看更多</div>
-			</div>
-			<div class="showHesher_page" id="showHesher_right">
-				<div id="showHesher_right_top">
-					<div style="width: 100%; height: 15%"></div>
-					<font class="HesherName">Hesher&nbsp;&nbsp;&nbsp;&nbsp;</font><font
-						class="video_font">微博</font>
-					<div
-						style="width: 80%; height: 70%; background-color: white; margin: 0 auto;">
-						<iframe style="width: 100%; height: 100%;" frameborder="0"
-							scrolling="no" src="https://weibo.com/Pantrick?is_all=1"></iframe>
-					</div>
-				</div>
-				<div id="showHesher_right_down">查看更多</div>
-			</div>
-		</div>
-		<div id="foot">
-			<div id="foot_top">
-				<div id = "foot_top_top">
-					<div style="background-image: url('pic/jumpToTop.png');background-size: cover;width:8%;height:100%;margin:0 auto;"></div>
-				</div>
-			</div>
-			<div id="foot_down">
-				<p
-					style="width: 640px; color: #888; font-size: 10px; padding-top: 60px; margin: 0 auto;">Copyright
-					© 2020 Hesher. All right reserved. Products and specifications are
-					subject to change without notice</p>
-			</div>
-		</div>
-	</div>
+        .viewport {
+            max-width: 640px;
+            min-width: 300px;
+            margin: 0 auto;
+        }
+
+        body {
+            margin: 0px 0px 0px 0px;
+        }
+    </style>
+</head>
+<body onload="initPage()">
+<!-- 头部标题 -->
+<header id="head">
+    <!--上方部分 -->
+    <div id="head_top">
+        <!-- MENU弹出框 分辨率横向大于1024时，左边距40px,小于等于则16px-->
+        <div id="head_top_left">
+            <div id="header-content-left-in">
+                <div id="header-content-left-in-in" onclick="openOrCloseLeftMenu()">
+                    <div id="header-content-left-in-in-in">
+                        <div id="header-content-left-in-in-in-top"></div>
+                        <div id="header-content-left-in-in-in-bottom"></div>
+
+                    </div>
+                    <span id="header-menu-text">MENU</span>
+                </div>
+            </div>
+            <div id="left_menu_0">
+                <!--电脑端 -->
+                <div id="left_menu_web">
+                    <div style="width: 100vw;height: 103px;position: absolute;top: 0px;left: 0px;">
+                        <div style="position: absolute;top:0px;left:0px;padding-top: 30px;padding-left: 40px;width: 40px;height: 40px;cursor: pointer;"
+                             onclick="openOrCloseLeftMenu()"></div>
+                    </div>
+                    <div class="left_menu_web_style" id="left_menu_web0"></div>
+                    <div class="left_menu_web_style" id="left_menu_web1"></div>
+                    <div class="left_menu_web_style" id="left_menu_web2"></div>
+                </div>
+                <!--手机端 -->
+                <div id="left_menu_moble" style="display: none">
+                    <div style="height: 80px;width: 100vw;position: absolute;top: 0;left: 0;border-bottom: 1px solid rgb(77,77,77)">
+                        <div style="position: absolute;padding-left: 16px;padding-top: 20px;width: 40px;height: 40px;cursor: pointer;"
+                             onclick="openOrCloseLeftMenu()"></div>
+                    </div>
+                    <div id="left_menu_moble_0">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Logo-->
+        <div id="logo_div">
+            <div id="head_top_logo"></div>
+        </div>
+        <!-- 右侧图标 分辨不同情况下显示不同 -->
+        <div id="head-content-right">
+            <div id="pos_relative">
+                <div id="header-content-right-sp" onclick="openAddress()">
+                    <div id="double_corcle"></div>
+                    <span id="header_share_text">SHARE</span>
+                </div>
+                <div id="header-content-right-wrap">
+                    <p id="follow-us-text">FOLLOW US:</p>
+                    <div class="little_pic" id="bilibili_logo" onclick="jumpToBiBiliPage()"></div>
+                    <div class="little_pic" onclick="jumpToWeiBoPage()" id="weibo_logo"></div>
+                    <div class="little_pic" id="wechat_logo" onclick="openWeChatInfo();"></div>
+                    <!-- 弹出微信二维码 -->
+                    <div id="weChatModel" class="weChatModel">
+                        <span class="weChatclose" onclick="closeWeChatPic()">&times;</span>
+                        <img class="weChatModal-content" id="weChatImg" src="pic/weChatImg.jpg">
+                        <div id="weChatInfo">微信二维码</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 可以隐藏的部分 -->
+    <div id="head_down">
+        <li class="header-nav-in">
+            <a class="top_a" href="javascript:void(0)" onclick="jumpToTeachPage()">乐器教学</a>
+        </li>
+        <li class="header-nav-in">
+            <a class="top_a" href="javascript:void(0)" onclick="openAddress()">演出承接</a>
+        </li>
+        <li class="header-nav-in">
+            <a class="top_a" href="javascript:void(0)" onclick="openAddress()">短视频运营</a>
+        </li>
+        <li class="header-nav-in">
+            <a class="top_a" href="javascript:void(0)" onclick="openAddress()">乐器设备销售</a>
+        </li>
+        <li class="header-nav-in" id="header-nav-in-end" onclick="openAddress()">
+            <a class="top_a" href="javascript:void(0)">录音服务</a>
+        </li>
+    </div>
+</header>
+<!-- 图片切换动态效果 新闻 -->
+<div id="news">
+    <div id="newsTop">
+        <div id
+             style="position: absolute;left: 50%;top: 50%;z-index: 2;transform: translate(-50%, -50%);text-align: center">
+            <p id="news_teacher_name"></p>
+            <p id="news_teacher_info"></p>
+        </div>
+        <div id="news-pic" onclick="jumToTeacherPageByNews()"></div>
+    </div>
+    <div id="newsbottom">
+        <div id="news-bottom-Center">
+            <div id="news_bottom_0" class="news-bottom-Center-page" onclick="clickNews(0)">
+                <div id="news_bottom_0_blue" class="new_bottom_blue"></div>
+            </div>
+            <div id="news_bottom_1" class="news-bottom-Center-page" onclick="clickNews(1)">
+                <div id="news_bottom_1_blue" class="new_bottom_blue"></div>
+            </div>
+            <div id="news_bottom_2" class="news-bottom-Center-page" onclick="clickNews(2)">
+                <div id="news_bottom_2_blue" class="new_bottom_blue"></div>
+            </div>
+            <div id="news_bottom_3" class="news-bottom-Center-page" onclick="clickNews(3)">
+                <div id="news_bottom_3_blue" class="new_bottom_blue"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 展示视频 弹出新窗口-->
+<div id="hesher_video_vid" onload="initVideoDiv()">
+    <h3 id="hesher_video_left">
+        <span class="hesher_video_left-big">视频</span>
+        <span class="hesher_video_left-content">Hesher<span class="hesher_video_left-min"></span></span>
+    </h3>
+    <img id="heasher_video_logo" src="pic/video_play_btn.png" onclick="jumpToVideoPage()"/>
+    <div id="hesher_video_left_line"></div>
+    <div id="hesher_video_bottom_div">
+        <div id="hesher_video_bottom_href"><p id="hesher_video_bottom_p" style="cursor:pointer"
+                                              onclick="jumpToVideoPage()">查看更多</p></div>
+    </div>
+</div>
+<div id="pure-g">
+    <div class="pure-g-div" id="pure-g-div-left">
+        <p class="pure-g-div-p">联系我们</p>
+        <img src="pic/addressUsImg.png"/>
+        <div class="pure-g-div-bottom">
+            <p id="pure-g-div-bottom_left_t" style="cursor:pointer" onclick="openAddress()">查看更多</p>
+        </div>
+    </div>
+    <div class="pure-g-div" id="pure-g-div-right">
+        <p class="pure-g-div-p">技术支持</p>
+        <img src="pic/techSuppostImg.png"/>
+        <div class="pure-g-div-bottom">
+            <p id="pure-g-div-bottom_right_t" style="cursor:pointer" onclick="openAddress()">查看更多</p>
+        </div>
+    </div>
+</div>
+<!--左侧b站 右侧微博-->
+<div id="showHesher">
+    <div class="showHesher_page" id="showHesher_left">
+        <div class="showHesher_top">
+            <h2 class="showHesher_top_text"><span class="showHesher_top_text_name">Hesher</span>Bilibili</h2>
+            <div class="showHesher_top_frame">
+                <iframe loading="lazy"
+                        src="http://player.bilibili.com/player.html?aid=81427197&bvid=BV1EJ411h7vg&cid=139354407&page=1"
+                        style="width: 100%; height: 50%" scrolling="no" border="0"
+                        frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+            </div>
+        </div>
+        <div class="showHesher_down" onclick="jumpToBiBiliPage()" id="showHesher_left_down"><p>查看更多</p></div>
+    </div>
+    <div class="showHesher_page" id="showHesher_right">
+        <div class="showHesher_top">
+            <h2 class="showHesher_top_text"><span class="showHesher_top_text_name">Hesher</span>微博</h2>
+            <div class="showHesher_top_frame">
+                <iframe loading="lazy" style="width: 100%; height: 50%;" frameborder="0"
+                        scrolling="no" src="https://weibo.com/Pantrick?is_all=1"></iframe>
+            </div>
+        </div>
+        <div class="showHesher_down" id="showHesher_right_down" onclick="jumpToWeiBoPage()"><p>查看更多</p></div>
+    </div>
+</div>
+<!-- 地址信息 -->
+<div id="contact">
+    <div id="closecontact"></div>
+    <div id="contact_info">
+        <div style="width: 300px;height: 136px">
+            <div class="button_model">
+                <div class="button_model_anime" id="button_model_anime_1">
+                    <div class="button_model_pic" style="background-position: -80px,0"></div>
+                    <div class="button_model_font">电话</div>
+                </div>
+            </div>
+            <div class="button_model">
+                <div class="button_model_anime" id="button_model_anime_2">
+                    <div class="button_model_pic" style="background-position: -160px,0"></div>
+                    <div class="button_model_font">bilibili</div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 300px;height: 136px">
+            <div class="button_model">
+                <div class="button_model_anime" id="button_model_anime_3">
+                    <div class="button_model_pic" style="background-position: -240px,0"></div>
+                    <div class="button_model_font">微博</div>
+                </div>
+            </div>
+            <div class="button_model">
+                <div class="button_model_anime" id="button_model_anime_4">
+                    <div class="button_model_pic" style="background-position: -320px,0"></div>
+                    <div class="button_model_font">邮箱</div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 300px;">
+            <div id="button_pic"></div>
+        </div>
+    </div>
+</div>
+<!-- 底部信息 -->
+<div id="bottom-main">
+    <!-- return top -->
+    <div id="bottom-return-top-div">
+        <div style="width: 100%;">
+            <img src="pic/jumpToTop.png" style="height: 70%;width: auto;"/>
+        </div>
+        <div style="width: 100%;height: 14px">
+            <span style="color: rgba(136,136,136,1);">PAGE TOP</span>
+        </div>
+    </div>
+    <!-- 其他信息 -->
+    <div id="bottom-otherinfo-div">
+        <!-- logo -->
+        <div style="width: 100%;text-align: center;padding-top: 40px">
+            <img id="bottom-logo-img" src="pic/logo1_1.png"/>
+        </div>
+        <!-- 联系我们 -->
+        <div id="address-us-div">
+            <li class="address-us-li">
+                <a href="javascript:void(0)" id="bottom_addredd_us" onclick="openAddress()">联系我们</a>
+            </li>
+            <li class="address-us-li">
+                <a href="javascript:void(0)" onclick="jumpToBiBiliPage()">哔哩哔哩</a>
+            </li>
+            <li class="address-us-li">
+                <a href="javascript:void(0)" onclick="jumpToBiBiliPage()">微博</a>
+            </li>
+        </div>
+        <!-- 版权信息 -->
+        <div>
+            <p id="footer-copy">Copyright © 2020 HesherStudio. All right reserved. Products and specifications are
+                subject to change without notice</p>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

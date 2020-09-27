@@ -3,52 +3,65 @@
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-	<!-- 导入配置文件 -->
-	<properties resource="application.yml" />
- 
-	<!-- generatorConfig.xml里面context节点的子节点必须按顺序配置,不然会报错 -->
- 
-	<!-- defaultModelType="flat" 设置复合主键时不单独为主键创建实体 -->
-	<context id="default" defaultModelType="flat" targetRuntime="MyBatis3">
- 
-		<!-- 生成的POJO实现java.io.Serializable接口 -->
-		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
- 
-		<!--注释 -->
-		<commentGenerator>
-			<!-- 将数据库中表的字段描述信息添加到注释 -->
-			<property name="addRemarkComments" value="true" />
-			<!-- 注释里不添加日期 -->
-			<property name="suppressDate" value="true" />
-			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
-			<property name="suppressAllComments" value="true" />
-		</commentGenerator>
- 
-		<!-- 数据库连接，直接通过${}读取application.properties里的配置 -->
-		<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver" 
-						connectionURL="jdbc:mysql://localhost:3306/hesher?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf-8" 
-						userId="root" 
-						password="123">
-			<!-- 如果数据库是MySQL 8.x 自定义的表与系统表有同名时，会自动生产两张表的对应代码，而且会有很多冲突和错误，此时设置table的schema也没有效果，需要在连接节点里面添加nullCatalogMeansCurrent属性 -->
-			<property name="nullCatalogMeansCurrent" value="true" />
-		</jdbcConnection>
- 
-		<!-- 生成POJO对象，并将类放到com.Hesher.pojo包下 -->
-		<javaModelGenerator targetPackage="com.Hesher.pojo" targetProject="src/main/java"></javaModelGenerator>
- 
-		<!-- 生成mapper xml文件，并放到resources下的mapper文件夹下 -->
-		<sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"></sqlMapGenerator>
- 
-		<!-- 生成mapper xml对应dao接口，放到com.Hesher.mapper包下 -->
-		<javaClientGenerator targetPackage="com.Hesher.mapper" targetProject="src/main/java" type="XMLMAPPER"></javaClientGenerator>
- 
-		<!-- table标签可以有多个，至少一个，tableName指定表名，可以使用_和%通配符 -->
-		<table tableName="teacher">
-			<!-- 是否只生成POJO对象 -->
-			<property name="modelOnly" value="false" />
-			<!-- 数据库中表名有前缀，而实体又不想带前缀，这个配置可以把实体的前缀去掉 -->
-			<!-- <domainObjectRenamingRule searchString="^sys" replaceString=""/> -->
-		</table>
-	</context>
-	<!-- maven build.. mybatis-generator:generate  -e -->
+    <!-- 导入配置文件 -->
+    <properties resource="application.yml"/>
+
+    <!-- generatorConfig.xml里面context节点的子节点必须按顺序配置,不然会报错 -->
+
+    <!-- defaultModelType="flat" 设置复合主键时不单独为主键创建实体 -->
+    <context id="default" defaultModelType="flat" targetRuntime="MyBatis3">
+
+        <!-- 生成的POJO实现java.io.Serializable接口 -->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+
+        <!--注释 -->
+        <commentGenerator>
+            <!-- 将数据库中表的字段描述信息添加到注释 -->
+            <property name="addRemarkComments" value="true"/>
+            <!-- 注释里不添加日期 -->
+            <property name="suppressDate" value="true"/>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!-- 数据库连接，直接通过${}读取application.properties里的配置 -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/hesher?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf-8"
+                        userId="root"
+                        password="123">
+            <!-- 如果数据库是MySQL 8.x 自定义的表与系统表有同名时，会自动生产两张表的对应代码，而且会有很多冲突和错误，此时设置table的schema也没有效果，需要在连接节点里面添加nullCatalogMeansCurrent属性 -->
+            <property name="nullCatalogMeansCurrent" value="true"/>
+        </jdbcConnection>
+
+        <!-- 生成POJO对象，并将类放到com.Hesher.pojo包下 -->
+        <javaModelGenerator targetPackage="com.Hesher.pojo" targetProject="src/main/java"></javaModelGenerator>
+
+        <!-- 生成mapper xml文件，并放到resources下的mapper文件夹下 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"></sqlMapGenerator>
+
+        <!-- 生成mapper xml对应dao接口，放到com.Hesher.mapper包下 -->
+        <javaClientGenerator targetPackage="com.Hesher.mapper" targetProject="src/main/java"
+                             type="XMLMAPPER"></javaClientGenerator>
+
+        <!-- table标签可以有多个，至少一个，tableName指定表名，可以使用_和%通配符 -->
+        <table tableName="left_menu">
+            <!-- 是否只生成POJO对象 -->
+            <property name="modelOnly" value="false"/>
+            <!-- 数据库中表名有前缀，而实体又不想带前缀，这个配置可以把实体的前缀去掉 -->
+            <!-- <domainObjectRenamingRule searchString="^sys" replaceString=""/> -->
+        </table>
+        <table tableName="teacher">
+            <!-- 是否只生成POJO对象 -->
+            <property name="modelOnly" value="false"/>
+            <!-- 数据库中表名有前缀，而实体又不想带前缀，这个配置可以把实体的前缀去掉 -->
+            <!-- <domainObjectRenamingRule searchString="^sys" replaceString=""/> -->
+        </table>
+        <table tableName="wechatgong">
+            <!-- 是否只生成POJO对象 -->
+            <property name="modelOnly" value="false"/>
+            <!-- 数据库中表名有前缀，而实体又不想带前缀，这个配置可以把实体的前缀去掉 -->
+            <!-- <domainObjectRenamingRule searchString="^sys" replaceString=""/> -->
+        </table>
+    </context>
+    <!-- maven build.. mybatis-generator:generate  -e -->
 </generatorConfiguration>

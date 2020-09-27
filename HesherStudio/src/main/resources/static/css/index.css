@@ -1,0 +1,270 @@
+body {
+    margin: 0px 0px 0px 0px;
+    min-width: 500px;
+}
+
+#news {
+    background-color: black;
+    position: relative;
+    width: 100vw;
+    height: 56vw;
+    background-size: cover;
+}
+
+#newsTop {
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 0;
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#news-pic {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+#newsbottom {
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    height: 90px;
+    z-index: 1;
+}
+
+#news_teacher_name {
+    color: white;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+#news_teacher_info {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.new_bottom_blue {
+    width: 0%;
+    height: 100%;
+    background: rgba(0, 167, 203, 0.5);
+}
+
+#news-bottom-Center {
+    width: 640px;
+    height: 90px;
+    margin: 0 auto
+}
+
+.news-bottom-Center-page {
+    width: 160px;
+    height: 100%;
+    float: left;
+    cursor: pointer;
+}
+
+#show_video {
+    background: url("../pic/rotating-banner-rg5170gsvf.jpg") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 56vw;
+}
+
+#hesher_video_vid {
+    background: url("../pic/video_play.jpg") no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 56vw;
+    background-size: cover;
+    position: relative;
+}
+
+#heasher_video_logo {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+#hesher_video_left {
+    width: 200px;
+    height: 147px;
+    color: white;
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    left: 60px;
+}
+
+.hesher_video_left-big {
+    display: block;
+    padding-bottom: 10px;
+    font-size: 70px;
+    padding-bottom: 10px;
+}
+
+.hesher_video_left-content {
+    font-size: 36px;
+}
+
+#hesher_video_left_line {
+    height: 1px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    background-color: white;
+}
+
+#hesher_video_bottom_div {
+    width: 100%;
+    height: 123px;
+    border-top: 1px solid rgb(85, 85, 85);
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+}
+
+#hesher_video_bottom_href {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    color: rgb(136, 136, 136);
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#pure-g {
+    width: 100vw;
+    height: 33.5vw;
+    position: relative;
+}
+
+.pure-g-div {
+    width: 50vw;
+    height: 100%;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+#pure-g-div-left {
+    background: url("../pic/addressUs.jpg") no-repeat;
+    background-size: cover;
+}
+
+#pure-g-div-right {
+    background: url("../pic/teachSupport.jpg") no-repeat;
+    background-size: cover;
+}
+
+.pure-g-div-p {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 10vw;
+}
+
+.pure-g-div-bottom {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50vw;
+    height: 10vw;
+    bottom: 0px;
+}
+
+#pure-g-div-bottom_left_t {
+    width: 50vw;
+    color: rgb(136, 136, 136);
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    top: 30%;
+}
+
+#pure-g-div-bottom_right_t {
+    width: 50vw;
+    color: rgb(136, 136, 136);
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    top: 30%;
+}
+
+#showHesher {
+    height: 51.5vw;
+    width: 100vw;
+    position: relative;
+}
+
+.showHesher_page {
+    height: 51.5vw;
+    width: 50vw;
+    float: left;
+}
+
+#showHesher_left {
+    background-color: rgba(28, 28, 28, 1);
+}
+
+#showHesher_right {
+    background-color: rgba(16, 16, 16, 1);
+}
+
+.showHesher_top {
+    padding-left: 60px;
+    padding-right: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.showHesher_down {
+    border-top: 1px solid rgb(85, 85, 85);
+    position: absolute;
+    width: 50vw;
+    height: 123px;
+    bottom: 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(136, 136, 136);;
+    cursor: pointer;
+}
+
+.showHesher_page p {
+    margin-top: 45px;
+}
+
+.showHesher_top_text {
+    position: relative;
+    display: inline-block;
+    padding-top: 90px;
+    padding-left: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgb(85, 85, 85);
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.showHesher_top_text_name {
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.showHesher_top_frame {
+    margin-top: 50px;
+}

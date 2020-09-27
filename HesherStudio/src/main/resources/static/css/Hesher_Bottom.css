@@ -1,0 +1,62 @@
+#bottom-main {
+    padding-bottom: 80px;
+    width: 100vw;
+    height: 400px;
+    background: url("../pic/footer_bg.jpg") no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+}
+
+#bottom-return-top-div {
+    background-color: rgba(34, 34, 34, .9);
+    width: 100%;
+    height: 51px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    text-decoration-color: rgba(136, 136, 136, 1);
+    cursor: pointer;
+}
+
+#bottom-otherinfo-div {
+    width: 100%;
+    height: 274px;
+}
+
+#bottom-logo-img {
+    cursor: pointer;
+    width: 170px;
+    height: auto;
+}
+
+#address-us-div {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 14px;
+    text-align: center;
+}
+
+.address-us-li {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 1;
+    color: rgb(136, 136, 136);
+    text-decoration: none;
+    border-left: 1px solid rgb(136, 136, 136);
+}
+
+.address-us-li a {
+    color: rgb(136, 136, 136);
+}
+
+#footer-copy {
+    text-align: center;
+    color: rgb(136, 136, 136);
+}
+
+#news-pic {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
