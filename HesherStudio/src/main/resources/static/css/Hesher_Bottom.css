@@ -5,6 +5,7 @@
     background: url("../pic/footer_bg.jpg") no-repeat;
     background-position: bottom left;
     background-size: cover;
+    display: none;
 }
 
 #bottom-return-top-div {

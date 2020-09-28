@@ -5,6 +5,9 @@
     right: 0;
     width: 100vw;
     z-index: 2;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    display: none;
 }
 
 #head_top {
@@ -24,7 +27,6 @@
 }
 
 #head_top_left {
-    display: none;
     padding-top: 30px;
     width: 160px;
     height: 40px;
@@ -32,7 +34,6 @@
 }
 
 #logo_div {
-    display: none;
     float: left;
     height: 100%;
     width: calc(100% - 394px);
@@ -140,6 +141,7 @@
     font-size: 13px;
     margin: 0px 0px 0px 0px;
     text-align: center;
+    padding-top: 2px;
 }
 
 .little_pic {
@@ -150,19 +152,19 @@
 }
 
 #bilibili_logo {
-    background: url("../pic/bilibililogo.png") no-repeat;
+    background: url("../pic/bilibili-line.svg") no-repeat;
     background-size: cover;
     cursor: pointer;
 }
 
 #wechat_logo {
-    background: url("../pic/wechat.png") no-repeat;
+    background: url("../pic/weChat.svg") no-repeat;
     background-size: cover;
     cursor: pointer;
 }
 
 #weibo_logo {
-    background: url("../pic/weibo.png") no-repeat;
+    background: url("../pic/weibo.svg") no-repeat;
     background-size: cover;
     cursor: pointer;
 }

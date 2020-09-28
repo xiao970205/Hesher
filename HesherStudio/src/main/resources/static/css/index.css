@@ -1,9 +1,10 @@
 body {
     margin: 0px 0px 0px 0px;
-    min-width: 500px;
+    min-width: 100vw;
 }
 
 #news {
+    display: none;
     background-color: black;
     position: relative;
     width: 100vw;
@@ -20,7 +21,7 @@ body {
     position: relative;
     left: 0;
     top: 0;
-    display: block;
+    display: none;
     margin-left: auto;
     margin-right: auto;
 }
@@ -84,6 +85,7 @@ body {
     height: 56vw;
     background-size: cover;
     position: relative;
+    display: none;
 }
 
 #heasher_video_logo {
@@ -147,6 +149,7 @@ body {
     width: 100vw;
     height: 33.5vw;
     position: relative;
+    display: none;
 }
 
 .pure-g-div {
@@ -204,6 +207,7 @@ body {
     height: 51.5vw;
     width: 100vw;
     position: relative;
+    display: none;
 }
 
 .showHesher_page {
@@ -267,4 +271,17 @@ body {
 
 .showHesher_top_frame {
     margin-top: 50px;
+    height: 30vw;
+}
+#waitingPic{
+    background: url("../pic/wating_background.png") no-repeat;
+    background-size: cover;
+    height: 50vw;
+    width: 50vw;
+    position:absolute;
+    left:0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
 }

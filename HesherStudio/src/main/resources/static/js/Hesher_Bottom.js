@@ -29,23 +29,17 @@ $(document).ready(function () {
     }, function () {
         $("#bottom-return-top-div").animate({opacity: '0.9'}, 200);
     });
-});
-
-$(function () {
-    $("#bottom-return-top-div").click(function () {
-        $("html,body").animate({scrollTop: 0}, 500);
-    });
-});
-
-$(function () {
     $("#bottom-logo-img").click(function () {
         $(location).attr("href", "/");
     });
-})
+});
 
 /**
  * 需要header模块,弹出微信二维码
  */
 function openWeChatInfo() {
     document.getElementById('weChatModel').style.display = "block";
+}
+function retrunToTop() {
+    $("html,body").animate({scrollTop:'0'},500);
 }

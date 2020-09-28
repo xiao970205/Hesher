@@ -1,13 +1,33 @@
-window.onresize = function () {
-    initPage();
-}
+// window.onresize = function () {
+//     initPage();
+// }
 
 //初始化方法
 function initPage() {
-    initBottomModel();
+
     initHeaderModel();
     initVideoDiv();
     initNews();
+    initBottomModel();
+    $("#waitingPic").css("transition-duration","0.5s");
+    $("#waitingPic").css("transform","rotate(45deg)");
+    setTimeout(()=>{
+        $("#waitingPic").css("transform","rotate(0deg)");
+    },500);
+    setTimeout(()=>{
+        $("#contact").css("display","block");
+        $("#newsTop").css("display","block");
+        $("#news").css("display","block");
+        $("#pure-g").css("display","block");
+        $("#showHesher").css("display","block");
+        $("#display").css("display","block");
+        $("#head").css("display","block");
+        $("#bottom-main").css("display","block");
+        $("#hesher_video_vid").css("display","block");
+        $("#waitingDiv").css("display","none");
+        $("#waitingPic").css("display","none");
+    },1000);
+
 }
 
 var now_animate_size = 3;
@@ -119,7 +139,6 @@ function clickNews(select_animate_size) {
  * 初始化视频模块
  */
 function initVideoDiv() {
-
     $("#hesher_video_bottom_p").hover(function () {
         $("#hesher_video_bottom_p").animate({opacity: '0.5'}, 200);
     }, function () {
@@ -153,6 +172,12 @@ function initVideoDiv() {
     }, function () {
         $("#showHesher_left_down p").animate({opacity: '1.0'}, 200);
     });
+    $("#news-pic").on("touchmove",function (e) {
+        console.log("调用");
+        var _touch = e.originalEvent.targetTouches[0];
+        var _x= _touch.pageX;
+        console.log(_x);
+    })
 }
 
 document.documentElement.addEventListener('touchstart', function (event) {

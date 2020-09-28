@@ -19,8 +19,6 @@ function jumpToWeiBoPage() {
  * 初始化头部
  */
 function initHeaderModel() {
-    $("#head_top_left").css("display","block");
-    $("#logo_div").css("display","block");
     var scarmWidth = $(window).width();
     //初始化左侧menu信息
     getMenuInfo();
@@ -69,7 +67,7 @@ function initHeaderModel() {
 
         $("#header-content-left-in").css("padding-left", "40px");
 
-        $("#head-content-right").css("width", "234px");
+        $("#head-content-right").css("width", "234");
         $("#head-content-right").css("height", "66px");
         $("#head-content-right").css("padding-right", "0px");
 
