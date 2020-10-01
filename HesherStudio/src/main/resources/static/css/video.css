@@ -1,0 +1,96 @@
+body {
+    background-color: black;
+}
+
+.video_main {
+    width: 100vw;
+    background-color: rgb(72, 72, 72);
+    position: relative;
+    position: relative;
+}
+
+.video_in {
+    margin: 0 auto;
+    position: relative;
+    overflow-y: auto;
+}
+
+.video_tittle {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+
+.video_show_main {
+    float: left;
+    position: relative;
+}
+
+#video_left {
+    float: left;
+}
+
+.video_left_main {
+    position: relative;
+}
+
+.video_show_tittle {
+    position: absolute;
+    width: 130px;
+    background-color: #ff5722;
+    height: 49px;
+    padding: 16px 16px 16px 16px;
+}
+
+.video_show_tittle_h5 {
+    font-size: 18px;
+    color: white;
+    padding-bottom: 7px;
+    margin: 0 0 0 0;
+}
+
+.video_show_tittle_p {
+    font-size: 14px;
+    color: #000;
+    margin: 0 0 0 0;
+}
+
+.video_show_video {
+    height: 100%;
+}
+
+.video_shwo_iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.video_right {
+    float: left;
+}
+
+.video_right_main {
+    position: relative;
+}
+
+.video_more_main {
+    width: 100%;
+    position: relative;
+    background-color: rgb(72, 72, 72);
+}
+
+.video_more_in {
+    margin: 0 auto;
+    top: 40px;
+}
+
+#weixin {
+    background: url("../pic/weChatImg.jpg") no-repeat;
+    background-size: cover;
+    float: left;
+}
+
+#douyin {
+    background: url("../pic/douyinEr.png") no-repeat;
+    background-size: cover;
+    float: left;
+}

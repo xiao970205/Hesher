@@ -11,11 +11,19 @@ public class Teacher implements Serializable {
 
     private String phone;
 
-    private String teacherinfo;
-
     private String teachershortinfo;
 
+    private String teacherinfo;
+
+    private String teacherinfo2;
+
+    private String teacherinfo3;
+
     private Integer ranking;
+
+    private String teacherPagePic1;
+
+    private String teacherPagePic2;
 
     private String pic1;
 
@@ -67,14 +75,6 @@ public class Teacher implements Serializable {
         this.phone = phone;
     }
 
-    public String getTeacherinfo() {
-        return teacherinfo;
-    }
-
-    public void setTeacherinfo(String teacherinfo) {
-        this.teacherinfo = teacherinfo;
-    }
-
     public String getTeachershortinfo() {
         return teachershortinfo;
     }
@@ -83,12 +83,52 @@ public class Teacher implements Serializable {
         this.teachershortinfo = teachershortinfo;
     }
 
+    public String getTeacherinfo() {
+        return teacherinfo;
+    }
+
+    public void setTeacherinfo(String teacherinfo) {
+        this.teacherinfo = teacherinfo;
+    }
+
+    public String getTeacherinfo2() {
+        return teacherinfo2;
+    }
+
+    public void setTeacherinfo2(String teacherinfo2) {
+        this.teacherinfo2 = teacherinfo2;
+    }
+
+    public String getTeacherinfo3() {
+        return teacherinfo3;
+    }
+
+    public void setTeacherinfo3(String teacherinfo3) {
+        this.teacherinfo3 = teacherinfo3;
+    }
+
     public Integer getRanking() {
         return ranking;
     }
 
     public void setRanking(Integer ranking) {
         this.ranking = ranking;
+    }
+
+    public String getTeacherPagePic1() {
+        return teacherPagePic1;
+    }
+
+    public void setTeacherPagePic1(String teacherPagePic1) {
+        this.teacherPagePic1 = teacherPagePic1;
+    }
+
+    public String getTeacherPagePic2() {
+        return teacherPagePic2;
+    }
+
+    public void setTeacherPagePic2(String teacherPagePic2) {
+        this.teacherPagePic2 = teacherPagePic2;
     }
 
     public String getPic1() {

@@ -23,4 +23,8 @@ public class TeacherServiceImpl implements TeacherService {
         return teacherMapper.selectByExample(example);
     }
 
+    public Teacher selectByPrimeKey(String primeKey){
+        return teacherMapper.selectByPrimaryKey(primeKey);
+    }
+
 }

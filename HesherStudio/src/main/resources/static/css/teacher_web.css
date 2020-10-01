@@ -1,0 +1,172 @@
+.head_black {
+    height: 158px;
+}
+
+.teacher_page_up {
+    height: 669px;
+}
+
+.teacher_page_up_in {
+    width: 1140px;
+    height: 669px;
+    margin: 0 auto;
+    position: relative;
+    overflow: auto;
+}
+
+.teacher_page_up_left {
+    width: 1140px;
+    height: 93px;
+    position: relative;
+    top: 0px;
+    color: white;
+    font-family: 'Open Sans', sans-serif
+}
+
+.teacher_logo_2_pic {
+    float: left;
+    font-size: 60px;
+    width: 266px;
+    height: 120px;
+    margin-top: 10px;
+}
+
+.teacher_page_up_left_rightMenu {
+    float: right;
+    font-size: 22px;
+    padding-top: 32px;
+}
+
+.teacher_page_up_left_rightMenu_style {
+    float: left;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.teacher_page_up_down {
+    width: 1140px;
+    height: 494px;
+    margin-top: 60px;
+}
+
+.teacher_page_up_down_left_in_style {
+    height: 38px;
+}
+
+
+.teacher_page_up_down_left {
+    width: 665px;
+    height: 494px;
+    float: left;
+}
+
+.teacher_page_up_down_left_in {
+    width: 569px;
+    height: 398px;
+    padding-top: 48px;
+    padding-left: 48px;
+}
+
+.teacher_page_up_down_left_in_hi {
+    width: 34px;
+    height: 21px;
+    padding: .5em 1.5em;
+    font-size: 19px;
+}
+
+.teacher_page_up_down_left_in_li_b {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.teacher_page_up_down_right {
+    width: 475px;
+    height: 100%;
+    float: left;
+}
+
+#top_pic1 {
+    width: 379px;
+    height: 379px;
+    margin-top: 48px;
+    margin-left: 48px;
+}
+
+.teacher_page_down {
+    height: 580px;
+}
+
+#pic2_img {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.teacher_page_down_right {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+#teacher_info_pages {
+    padding: 4.5em 0 4.7em 0;
+}
+
+.teacher_page_down_right_page {
+    width: 50vw;
+    min-height: 433px;
+}
+
+.teacher_page_down_right_page_in {
+    margin-left: 10em;
+    margin-right: 10em;
+    width: 70%;
+}
+
+.teacher_page_down_right_page_in_h2 {
+    color: #191919;
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.teacher_page_down_right_page_in_h2 {
+    font-weight: 700;
+}
+
+.teacher_page_down_right_page_in_p {
+    max-height: 244px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+.teacher_page_down_right_page_in_div {
+    margin-top: 48px;
+}
+
+.teacher_page_down_right_page_in_div_font {
+    margin-right: 10px;
+    padding: 11px 38px;
+    height: auto;
+    width: auto;
+}
+
+.teacher_info_dot_div {
+    right: 94%;
+    top: 147px;
+    width: 13px;
+}
+
+.teacher_info_div_dot {
+    padding: 0.1em 0;
+    width: 13px;
+    height: auto;
+}
+
+.teacher_info_div_dot_style {
+    width: 13px;
+    height: 13px;
+    margin: 5px 0px;
+    border-radius: 20px;
+}

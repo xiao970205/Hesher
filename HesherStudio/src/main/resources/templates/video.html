@@ -1,5 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html style="overflow-x: hidden;overflow-y: auto">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html"
+      style="overflow-x: hidden;overflow-y: auto">
 <head>
     <title>Hesher Studio 海涩文化-线上音乐教育的先行者</title>
     <meta charset="UTF-8">
@@ -8,11 +9,12 @@
     <link rel="stylesheet" href="css/Hesher_Header.css" type="text/css"/>
     <link rel="stylesheet" href="css/Hesher_Bottom.css" type="text/css">
     <link rel="stylesheet" href="css/Hesher_Address.css" type="text/css">
+    <link rel="stylesheet" href="css/video.css" type="text/css">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
-    <link href="css/index_moble.css" rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)">
-    <link href="css/index.css" rel="stylesheet" type="text/css" media="screen and (min-width: 1024px)">
-    <script type="text/javascript" src="js/index.js"></script>
+    <link href="css/video_moble.css" rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)">
+    <link href="css/video_web.css" rel="stylesheet" type="text/css" media="screen and (min-width: 1024px)">
+    <script type="text/javascript" src="js/video.js"></script>
     <script type="text/javascript" src="js/Hesher_Head.js"></script>
     <script type="text/javascript" src="js/Hesher_Bottom.js"></script>
     <script type="text/javascript" src="js/Hesher_Address.js"></script>
@@ -128,87 +130,24 @@
         </li>
     </div>
 </header>
-<!-- 图片切换动态效果 新闻 -->
-<div id="news">
-    <div id="newsTop">
-        <div
-                style="position: absolute;left: 50%;top: 50%;z-index: 2;transform: translate(-50%, -50%);text-align: center">
-            <p id="news_teacher_name"></p>
-            <p id="news_teacher_info"></p>
-        </div>
-        <div id="news-pic" onclick="jumToTeacherPageByNews()"></div>
-    </div>
-    <div id="newsbottom">
-        <div id="news-bottom-Center">
-            <div id="news_bottom_0" class="news-bottom-Center-page" onclick="clickNews(0)">
-                <div id="news_bottom_0_blue" class="new_bottom_blue"></div>
-            </div>
-            <div id="news_bottom_1" class="news-bottom-Center-page" onclick="clickNews(1)">
-                <div id="news_bottom_1_blue" class="new_bottom_blue"></div>
-            </div>
-            <div id="news_bottom_2" class="news-bottom-Center-page" onclick="clickNews(2)">
-                <div id="news_bottom_2_blue" class="new_bottom_blue"></div>
-            </div>
-            <div id="news_bottom_3" class="news-bottom-Center-page" onclick="clickNews(3)">
-                <div id="news_bottom_3_blue" class="new_bottom_blue"></div>
+<div class="video_main" style="display: none">
+    <div class="video_in">
+        <h3 class="video_tittle">MEET OUT
+            SHOW</h3>
+        <div class="video_show_main">
+            <div id="video_left"></div>
+            <div id="video_right" class="video_right">
             </div>
         </div>
     </div>
 </div>
-<!-- 展示视频 弹出新窗口-->
-<div id="hesher_video_vid" onload="initVideoDiv()">
-    <h3 id="hesher_video_left">
-        <span class="hesher_video_left-big">视频</span>
-        <span class="hesher_video_left-content">Hesher<span class="hesher_video_left-min"></span></span>
-    </h3>
-    <img id="heasher_video_logo" src="pic/video_play_btn.png" onclick="jumpToVideoPage()"/>
-    <div id="hesher_video_left_line"></div>
-    <div id="hesher_video_bottom_div">
-        <div id="hesher_video_bottom_href"><p id="hesher_video_bottom_p" style="cursor:pointer"
-                                              onclick="jumpToVideoPage()">查看更多</p></div>
+<div class="video_more_main" style="display:none;">
+    <div class="video_more_in">
+        <div id="weixin"></div>
+        <div id="douyin"></div>
     </div>
 </div>
-<div id="pure-g">
-    <div class="pure-g-div" id="pure-g-div-left">
-        <p class="pure-g-div-p">联系我们</p>
-        <img src="pic/addressUsImg.png"/>
-        <div class="pure-g-div-bottom">
-            <p id="pure-g-div-bottom_left_t" style="cursor:pointer" onclick="openAddress()">查看更多</p>
-        </div>
-    </div>
-    <div class="pure-g-div" id="pure-g-div-right">
-        <p class="pure-g-div-p">技术支持</p>
-        <img src="pic/techSuppostImg.png"/>
-        <div class="pure-g-div-bottom">
-            <p id="pure-g-div-bottom_right_t" style="cursor:pointer" onclick="openAddress()">查看更多</p>
-        </div>
-    </div>
-</div>
-<!--左侧b站 右侧微博-->
-<div id="showHesher">
-    <div class="showHesher_page" id="showHesher_left">
-        <div class="showHesher_top">
-            <h2 class="showHesher_top_text"><span class="showHesher_top_text_name">Hesher</span>Bilibili</h2>
-            <div class="showHesher_top_frame">
-                <iframe loading="lazy"
-                        src="http://player.bilibili.com/player.html?aid=201478471&bvid=BV1Fh411Z77v&cid=215559154&page=1"
-                        style="width: 100%; height: 100%" scrolling="no" border="0"
-                        frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-            </div>
-        </div>
-        <div class="showHesher_down" onclick="jumpToBiBiliPage()" id="showHesher_left_down"><p>查看更多</p></div>
-    </div>
-    <div class="showHesher_page" id="showHesher_right">
-        <div class="showHesher_top">
-            <h2 class="showHesher_top_text"><span class="showHesher_top_text_name">Hesher</span>微博</h2>
-            <div class="showHesher_top_frame">
-                <iframe loading="lazy" style="width: 100%; height: 100%;" frameborder="0"
-                        scrolling="no" src="https://weibo.com/Pantrick?is_all=1"></iframe>
-            </div>
-        </div>
-        <div class="showHesher_down" id="showHesher_right_down" onclick="jumpToWeiBoPage()"><p>查看更多</p></div>
-    </div>
-</div>
+
 <!-- 地址信息 -->
 <div id="contact">
     <div id="contant_close_div">
@@ -316,5 +255,6 @@
 <div id="waitingDiv" style="height: 100vh;width: 100vw;background: rgb(0,0,0)">
     <div id="waitingPic"></div>
 </div>
+<p id="videoJsonInfo" style="display: none" th:text="${videoInfo}"/>
 </body>
 </html>

@@ -1,0 +1,149 @@
+body{
+    background-color: black;
+}
+
+
+.teacher_page_up {
+    width: 100vw;
+    background-color: rgb(72, 72, 72)
+}
+
+.teacher_page_up_in {
+    margin: 0 auto;
+    position: relative;
+    overflow: auto;
+}
+
+.teacher_logo_2_pic {
+    background: url("../pic/logo_2.png") no-repeat;
+    background-size: cover;
+}
+
+.teacher_page_up_down {
+    background-color: rgba(23, 20, 20, 0.58);
+    position: relative;
+}
+
+.teacher_page_up_down_left_in_hi {
+    background-color: rgb(0, 167, 142);
+    color: white;
+    font-size: 19px;
+    font-weight: 700;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.teacher_page_up_down_left_in_teacher_designer {
+    width: 100%;
+    height: 17px;
+    color: rgb(199, 199, 199);
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 0.8em;
+}
+
+.teacher_page_up_down_left_in_line {
+    margin-top: 2em;
+    border-top: 1px solid #AFAFAF;
+    padding: 0;
+    margin-bottom: 10px
+}
+
+.teacher_page_up_down_left_in_style {
+    width: 100%;
+}
+
+.teacher_page_up_down_left_in_li_b {
+    color: #fff;
+    font-size: 16px;
+    text-align: left;
+}
+
+.teacher_page_up_down_left_in_li {
+    list-style-type: none;
+    margin-top: 1em;
+    width: 22px;
+    width: 40%;
+    float: left;
+}
+
+.teacher_page_down {
+    width: 100vw;
+}
+
+.teacher_page_down_right {
+    background: white;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#teacher_info_pages {
+    position: relative;
+    float: left;
+    width: 150vw;
+    overflow-x: hidden;
+    transform: translateX(0vw);
+    transition-duration: 0.5s;
+}
+
+.teacher_page_down_right_page {
+    position: relative;
+    float: left;
+}
+
+.teacher_page_down_right_page_in {
+    position: relative;
+}
+
+.teacher_page_down_right_page_in_h2 {
+    color: #191919;
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.teacher_page_down_right_page_in_h2 {
+    font-weight: 700;
+}
+
+.teacher_page_down_right_page_in_p {
+    color: #666666;
+    font-size: 16px;
+    overflow-y: hidden;
+    line-height: 32px;
+}
+
+.teacher_page_down_right_page_in_div {
+    margin-top: 48px;
+}
+
+.teacher_page_down_right_page_in_div_font {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid rgb(0, 167, 124);
+    font-size: 19px;
+    border-radius: 28px;
+    color: rgb(0, 167, 124);
+}
+.teacher_page_down_right_page_in_div_font_ge{
+    display: none;
+}
+.teacher_info_dot_div {
+    position: absolute;
+    z-index: 1;
+    width: 13px;
+    height: auto;
+}
+
+.teacher_info_div_dot {
+    padding: 0.1em 0;
+    width: 13px;
+    height: auto;
+}
+
+.teacher_info_div_dot_style {
+    width: 13px;
+    height: 13px;
+    margin: 5px 0px;
+    border-radius: 20px;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html style="overflow-x: hidden;overflow-y: auto">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html"
+      style="overflow-x: hidden;overflow-y: auto">
 <head>
     <title>Hesher Studio 海涩文化-线上音乐教育的先行者</title>
     <meta charset="UTF-8">
@@ -8,11 +9,12 @@
     <link rel="stylesheet" href="css/Hesher_Header.css" type="text/css"/>
     <link rel="stylesheet" href="css/Hesher_Bottom.css" type="text/css">
     <link rel="stylesheet" href="css/Hesher_Address.css" type="text/css">
+    <link rel="stylesheet" href="css/teacher.css" type="text/css">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
-    <link href="css/index_moble.css" rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)">
-    <link href="css/index.css" rel="stylesheet" type="text/css" media="screen and (min-width: 1024px)">
-    <script type="text/javascript" src="js/index.js"></script>
+    <link href="css/teacher_moble.css" rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)">
+    <link href="css/teacher_web.css" rel="stylesheet" type="text/css" media="screen and (min-width: 1024px)">
+    <script type="text/javascript" src="js/teacher.js"></script>
     <script type="text/javascript" src="js/Hesher_Head.js"></script>
     <script type="text/javascript" src="js/Hesher_Bottom.js"></script>
     <script type="text/javascript" src="js/Hesher_Address.js"></script>
@@ -44,6 +46,8 @@
             margin: 0px 0px 0px 0px;
         }
     </style>
+
+
 </head>
 <body onload="initPage()">
 <!-- 头部标题 -->
@@ -100,11 +104,11 @@
                     <div class="little_pic" onclick="jumpToWeiBoPage()" id="weibo_logo"></div>
                     <div class="little_pic" id="wechat_logo" onclick="openWeChatInfo();"></div>
                     <!-- 弹出微信二维码 -->
-                    <div id="weChatModel" class="weChatModel">
-                        <span class="weChatclose" onclick="closeWeChatPic()">&times;</span>
-                        <img class="weChatModal-content" id="weChatImg" src="pic/weChatImg.jpg">
-                        <div id="weChatInfo">微信二维码</div>
-                    </div>
+                </div>
+                <div id="weChatModel" class="weChatModel">
+                    <span class="weChatclose" onclick="closeWeChatPic()">&times;</span>
+                    <img class="weChatModal-content" id="weChatImg" src="pic/weChatImg.jpg">
+                    <div id="weChatInfo">微信二维码</div>
                 </div>
             </div>
         </div>
@@ -128,85 +132,145 @@
         </li>
     </div>
 </header>
-<!-- 图片切换动态效果 新闻 -->
-<div id="news">
-    <div id="newsTop">
-        <div
-                style="position: absolute;left: 50%;top: 50%;z-index: 2;transform: translate(-50%, -50%);text-align: center">
-            <p id="news_teacher_name"></p>
-            <p id="news_teacher_info"></p>
+<p id="teacherPagePic1" style="display: none" th:text="${teacherPagePic1}"/>
+<p id="teacherPagePic2" style="display: none" th:text="${teacherPagePic2}"/>
+<p id="name" style="display: none" th:text="${name}"/>
+<p id="instrument" style="display: none" th:text="${instrument}"/>
+<p id="shortInfo" style="display: none" th:text="${shortInfo}"/>
+<p id="Info" style="display: none" th:text="${Info}"/>
+<p id="Info2" style="display: none" th:text="${Info2}"/>
+<p id="Info3" style="display: none" th:text="${Info3}"/>
+<p id="pic1" style="display: none" th:text="${pic1}"/>
+<p id="pic2" style="display: none" th:text="${pic2}"/>
+</div>
+<div class="teacher_page_up">
+    <div class="teacher_page_up_in">
+        <div class="teacher_page_up_left">
+            <div class="teacher_logo_2_pic"></div>
+            <div class="teacher_page_up_left_rightMenu">
+                <div class="teacher_page_up_left_rightMenu_style">主页</div>
+                <div class="teacher_page_up_left_rightMenu_style">--></div>
+                <div class="teacher_page_up_left_rightMenu_style">乐器</div>
+                <div class="teacher_page_up_left_rightMenu_style">--></div>
+                <div class="teacher_page_up_left_rightMenu_style" th:text="${name}"></div>
+            </div>
         </div>
-        <div id="news-pic" onclick="jumToTeacherPageByNews()"></div>
-    </div>
-    <div id="newsbottom">
-        <div id="news-bottom-Center">
-            <div id="news_bottom_0" class="news-bottom-Center-page" onclick="clickNews(0)">
-                <div id="news_bottom_0_blue" class="new_bottom_blue"></div>
+        <div class="teacher_page_up_down">
+            <div class="teacher_page_up_down_left">
+                <div class="teacher_page_up_down_left_in">
+                    <h1 class="teacher_page_up_down_left_in_hi">
+                        HI&nbsp;!</h1>
+                    <h6 class="teacher_page_up_down_left_in_teacher_designer">
+                        TEACHER&nbsp;DESIGNER</h6>
+                    <ul class="teacher_page_up_down_left_in_line"></ul>
+                    <div class="teacher_page_up_down_left_in_style">
+                        <li class="teacher_page_up_down_left_in_li"><b
+                                class="teacher_page_up_down_left_in_li_b">NAME</b></li>
+                        <li class="teacher_page_up_down_left_in_li"><b
+                                id="teacherName"
+                                class="teacher_page_up_down_left_in_li_b"></b></li>
+                    </div>
+                    <div class="teacher_page_up_down_left_in_style">
+                        <li class="teacher_page_up_down_left_in_li"><b
+                                class="teacher_page_up_down_left_in_li_b">COURSE</b></li>
+                        <li class="teacher_page_up_down_left_in_li"><b
+                                id="teacher_instrument"
+                                class="teacher_page_up_down_left_in_li_b"></b></li>
+                    </div>
+                    <div class="teacher_page_up_down_left_in_style">
+                        <li class="teacher_page_up_down_left_in_li"><b
+                                class="teacher_page_up_down_left_in_li_b">LEVEL</b></li>
+                        <li class="teacher_page_up_down_left_in_li"><b
+                                class="teacher_page_up_down_left_in_li_b">海瑟文化签约教师</b></li>
+                    </div>
+                    <div class="teacher_page_up_down_left_in_style">
+                        <li class="teacher_page_up_down_left_in_li"><b
+                                class="teacher_page_up_down_left_in_li_b">INTRUDUCE</b></li>
+                        <li class="teacher_page_up_down_left_in_li"><b
+                                id="short_intruduce_show"
+                                class="teacher_page_up_down_left_in_li_b">海瑟文化签约教师</b></li>
+                    </div>
+                </div>
             </div>
-            <div id="news_bottom_1" class="news-bottom-Center-page" onclick="clickNews(1)">
-                <div id="news_bottom_1_blue" class="new_bottom_blue"></div>
-            </div>
-            <div id="news_bottom_2" class="news-bottom-Center-page" onclick="clickNews(2)">
-                <div id="news_bottom_2_blue" class="new_bottom_blue"></div>
-            </div>
-            <div id="news_bottom_3" class="news-bottom-Center-page" onclick="clickNews(3)">
-                <div id="news_bottom_3_blue" class="new_bottom_blue"></div>
+            <div class="teacher_page_up_down_right">
+                <div id="top_pic1"></div>
             </div>
         </div>
     </div>
 </div>
-<!-- 展示视频 弹出新窗口-->
-<div id="hesher_video_vid" onload="initVideoDiv()">
-    <h3 id="hesher_video_left">
-        <span class="hesher_video_left-big">视频</span>
-        <span class="hesher_video_left-content">Hesher<span class="hesher_video_left-min"></span></span>
-    </h3>
-    <img id="heasher_video_logo" src="pic/video_play_btn.png" onclick="jumpToVideoPage()"/>
-    <div id="hesher_video_left_line"></div>
-    <div id="hesher_video_bottom_div">
-        <div id="hesher_video_bottom_href"><p id="hesher_video_bottom_p" style="cursor:pointer"
-                                              onclick="jumpToVideoPage()">查看更多</p></div>
-    </div>
-</div>
-<div id="pure-g">
-    <div class="pure-g-div" id="pure-g-div-left">
-        <p class="pure-g-div-p">联系我们</p>
-        <img src="pic/addressUsImg.png"/>
-        <div class="pure-g-div-bottom">
-            <p id="pure-g-div-bottom_left_t" style="cursor:pointer" onclick="openAddress()">查看更多</p>
-        </div>
-    </div>
-    <div class="pure-g-div" id="pure-g-div-right">
-        <p class="pure-g-div-p">技术支持</p>
-        <img src="pic/techSuppostImg.png"/>
-        <div class="pure-g-div-bottom">
-            <p id="pure-g-div-bottom_right_t" style="cursor:pointer" onclick="openAddress()">查看更多</p>
-        </div>
-    </div>
-</div>
-<!--左侧b站 右侧微博-->
-<div id="showHesher">
-    <div class="showHesher_page" id="showHesher_left">
-        <div class="showHesher_top">
-            <h2 class="showHesher_top_text"><span class="showHesher_top_text_name">Hesher</span>Bilibili</h2>
-            <div class="showHesher_top_frame">
-                <iframe loading="lazy"
-                        src="http://player.bilibili.com/player.html?aid=201478471&bvid=BV1Fh411Z77v&cid=215559154&page=1"
-                        style="width: 100%; height: 100%" scrolling="no" border="0"
-                        frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<div class="teacher_page_down">
+    <div id="pic2_img"></div>
+    <div class="teacher_page_down_right">
+        <div id="teacher_info_pages">
+            <div class="teacher_page_down_right_page">
+                <div class="teacher_page_down_right_page_in">
+                    <h2 class="teacher_page_down_right_page_in_h2">
+                        HI! I`M <span class="teacher_page_down_right_page_in_h2_font" th:text="${name}"></span>
+                    </h2>
+                    <p id="teacher_info_1"
+                       class="teacher_page_down_right_page_in_p">
+                    </p>
+                    <div class="teacher_page_down_right_page_in_div">
+                        <font class="teacher_page_down_right_page_in_div_font"
+                              onclick="openWeChatInfo()">立即约课</font>
+                        <font class="teacher_page_down_right_page_in_div_font_ge"></font>
+                        <font class="teacher_page_down_right_page_in_div_font"
+                              onclick="openAddress()">联系我们</font>
+                    </div>
+                </div>
+            </div>
+            <div class="teacher_page_down_right_page">
+                <div class="teacher_page_down_right_page_in">
+                    <h2 class="teacher_page_down_right_page_in_h2">
+                        HI! I`M <span class="teacher_page_down_right_page_in_h2_font" th:text="${name}"></span>
+                    </h2>
+                    <p id="teacher_info_2"
+                       class="teacher_page_down_right_page_in_p">
+                    </p>
+                    <div class="teacher_page_down_right_page_in_div">
+                        <font class="teacher_page_down_right_page_in_div_font"
+                              onclick="openWeChatInfo()">立即约课</font>
+                        <font class="teacher_page_down_right_page_in_div_font_ge"></font>
+                        <font class="teacher_page_down_right_page_in_div_font"
+                              onclick="openAddress()">联系我们</font>
+                    </div>
+                </div>
+            </div>
+            <div class="teacher_page_down_right_page">
+                <div class="teacher_page_down_right_page_in">
+                    <h2 class="teacher_page_down_right_page_in_h2">
+                        HI! I`M <span class="teacher_page_down_right_page_in_h2_font" th:text="${name}"></span>
+                    </h2>
+                    <p id="teacher_info_3"
+                       class="teacher_page_down_right_page_in_p">
+                    </p>
+                    <div class="teacher_page_down_right_page_in_div">
+                        <font class="teacher_page_down_right_page_in_div_font"
+                              onclick="openWeChatInfo()">立即约课</font>
+                        <font class="teacher_page_down_right_page_in_div_font_ge"></font>
+                        <font class="teacher_page_down_right_page_in_div_font"
+                              onclick="openAddress()">联系我们</font>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="showHesher_down" onclick="jumpToBiBiliPage()" id="showHesher_left_down"><p>查看更多</p></div>
-    </div>
-    <div class="showHesher_page" id="showHesher_right">
-        <div class="showHesher_top">
-            <h2 class="showHesher_top_text"><span class="showHesher_top_text_name">Hesher</span>微博</h2>
-            <div class="showHesher_top_frame">
-                <iframe loading="lazy" style="width: 100%; height: 100%;" frameborder="0"
-                        scrolling="no" src="https://weibo.com/Pantrick?is_all=1"></iframe>
-            </div>
-        </div>
-        <div class="showHesher_down" id="showHesher_right_down" onclick="jumpToWeiBoPage()"><p>查看更多</p></div>
+<!--        <div class="teacher_info_dot_div">-->
+<!--            <div class="teacher_info_div_dot">-->
+<!--                <div id="teacher_info_dot_1" class="teacher_info_div_dot_style"-->
+<!--                     style="background-color: rgb(0,167,142);"-->
+<!--                     onclick="teacher_info_animate('1')"></div>-->
+<!--            </div>-->
+<!--            <div class="teacher_info_div_dot">-->
+<!--                <div id="teacher_info_dot_2" class="teacher_info_div_dot_style"-->
+<!--                     style="background-color: black;"-->
+<!--                     onclick="teacher_info_animate('2')"></div>-->
+<!--            </div>-->
+<!--            <div class="teacher_info_div_dot">-->
+<!--                <div id="teacher_info_dot_3" class="teacher_info_div_dot_style"-->
+<!--                     style="background-color: black;"-->
+<!--                     onclick="teacher_info_animate('3')"></div>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 </div>
 <!-- 地址信息 -->
@@ -219,8 +283,8 @@
             <!--        <div style="width: 300px;height: 136px">-->
             <div class="button_model">
                 <div class="button_model_anime" id="button_model_anime_1">
-                    <div class="button_model_pic" onclick="phoneButtonClick(this)">
-                        <div class="address_img"
+                    <div class="button_model_pic">
+                        <div class="address_img" onclick="phoneButtonClick(this)"
                              id="address_phone_img"></div>
                     </div>
                     <div class="button_model_font">电话</div>
@@ -236,7 +300,7 @@
             </div>
             <div class="button_model">
                 <div class="button_model_anime" id="button_model_anime_3">
-                    <div class="button_model_pic" onclick="jumpToWeiBoAndDou(this)">
+                    <div class="button_model_pic" onclick="jumpToWeiBoAndDou()">
                         <div class="address_img" id="address_weibo_img"></div>
                     </div>
                     <div class="button_model_font">微博</div>

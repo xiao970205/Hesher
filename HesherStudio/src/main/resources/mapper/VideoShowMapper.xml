@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.Hesher.mapper.VideoShowMapper">
+  <resultMap id="BaseResultMap" type="com.Hesher.pojo.VideoShow">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="video_url" jdbcType="VARCHAR" property="videoUrl" />
+    <result column="video_tittle_1" jdbcType="VARCHAR" property="videoTittle1" />
+    <result column="video_tittle_2" jdbcType="VARCHAR" property="videoTittle2" />
+    <result column="video_x" jdbcType="INTEGER" property="videoX" />
+    <result column="video_y" jdbcType="INTEGER" property="videoY" />
+    <result column="color" jdbcType="VARCHAR" property="color" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, video_url, video_tittle_1, video_tittle_2, video_x, video_y, color
+  </sql>
+  <select id="selectByExample" parameterType="com.Hesher.pojo.VideoShowExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from video_show
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from video_show
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from video_show
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.Hesher.pojo.VideoShowExample">
+    delete from video_show
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.Hesher.pojo.VideoShow">
+    insert into video_show (id, video_url, video_tittle_1, 
+      video_tittle_2, video_x, video_y, 
+      color)
+    values (#{id,jdbcType=VARCHAR}, #{videoUrl,jdbcType=VARCHAR}, #{videoTittle1,jdbcType=VARCHAR}, 
+      #{videoTittle2,jdbcType=VARCHAR}, #{videoX,jdbcType=INTEGER}, #{videoY,jdbcType=INTEGER}, 
+      #{color,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.Hesher.pojo.VideoShow">
+    insert into video_show
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="videoUrl != null">
+        video_url,
+      </if>
+      <if test="videoTittle1 != null">
+        video_tittle_1,
+      </if>
+      <if test="videoTittle2 != null">
+        video_tittle_2,
+      </if>
+      <if test="videoX != null">
+        video_x,
+      </if>
+      <if test="videoY != null">
+        video_y,
+      </if>
+      <if test="color != null">
+        color,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="videoUrl != null">
+        #{videoUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="videoTittle1 != null">
+        #{videoTittle1,jdbcType=VARCHAR},
+      </if>
+      <if test="videoTittle2 != null">
+        #{videoTittle2,jdbcType=VARCHAR},
+      </if>
+      <if test="videoX != null">
+        #{videoX,jdbcType=INTEGER},
+      </if>
+      <if test="videoY != null">
+        #{videoY,jdbcType=INTEGER},
+      </if>
+      <if test="color != null">
+        #{color,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.Hesher.pojo.VideoShowExample" resultType="java.lang.Long">
+    select count(*) from video_show
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update video_show
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.videoUrl != null">
+        video_url = #{record.videoUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.videoTittle1 != null">
+        video_tittle_1 = #{record.videoTittle1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.videoTittle2 != null">
+        video_tittle_2 = #{record.videoTittle2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.videoX != null">
+        video_x = #{record.videoX,jdbcType=INTEGER},
+      </if>
+      <if test="record.videoY != null">
+        video_y = #{record.videoY,jdbcType=INTEGER},
+      </if>
+      <if test="record.color != null">
+        color = #{record.color,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update video_show
+    set id = #{record.id,jdbcType=VARCHAR},
+      video_url = #{record.videoUrl,jdbcType=VARCHAR},
+      video_tittle_1 = #{record.videoTittle1,jdbcType=VARCHAR},
+      video_tittle_2 = #{record.videoTittle2,jdbcType=VARCHAR},
+      video_x = #{record.videoX,jdbcType=INTEGER},
+      video_y = #{record.videoY,jdbcType=INTEGER},
+      color = #{record.color,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.Hesher.pojo.VideoShow">
+    update video_show
+    <set>
+      <if test="videoUrl != null">
+        video_url = #{videoUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="videoTittle1 != null">
+        video_tittle_1 = #{videoTittle1,jdbcType=VARCHAR},
+      </if>
+      <if test="videoTittle2 != null">
+        video_tittle_2 = #{videoTittle2,jdbcType=VARCHAR},
+      </if>
+      <if test="videoX != null">
+        video_x = #{videoX,jdbcType=INTEGER},
+      </if>
+      <if test="videoY != null">
+        video_y = #{videoY,jdbcType=INTEGER},
+      </if>
+      <if test="color != null">
+        color = #{color,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.Hesher.pojo.VideoShow">
+    update video_show
+    set video_url = #{videoUrl,jdbcType=VARCHAR},
+      video_tittle_1 = #{videoTittle1,jdbcType=VARCHAR},
+      video_tittle_2 = #{videoTittle2,jdbcType=VARCHAR},
+      video_x = #{videoX,jdbcType=INTEGER},
+      video_y = #{videoY,jdbcType=INTEGER},
+      color = #{color,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

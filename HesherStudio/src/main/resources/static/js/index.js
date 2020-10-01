@@ -26,11 +26,14 @@ function initPage() {
         $("#hesher_video_vid").css("display","block");
         $("#waitingDiv").css("display","none");
         $("#waitingPic").css("display","none");
+        newsAnmiate();
+        news_animate = setInterval(() => newsAnmiate(), 6000);
     },1000);
 
 }
 
 var now_animate_size = 3;
+var now_animate_teacher_id = "";
 var piclist = null;
 var userJsonArray = null;
 
@@ -78,8 +81,7 @@ function initNews() {
         "height": "100%",
         "width": "100%"
     });
-    newsAnmiate();
-    news_animate = setInterval(() => newsAnmiate(), 6000);
+
 }
 
 var news_animate = null;
@@ -100,6 +102,7 @@ function newsAnmiate() {
     $("#news_teacher_name").html(userJsonArray[next_ainmate_size].name);
     $("#news_teacher_info").html(userJsonArray[next_ainmate_size].info2);
     now_animate_size = next_ainmate_size;
+    now_animate_teacher_id = userJsonArray[next_ainmate_size].id;
     setTimeout(() => {
         $("#news-pic").css({"transition": "transform 5s", "transform": "scale(1.2)"});
         $("#news_bottom_" + now_animate_size + "_blue").animate({width: '100%'}, 5000);
@@ -107,7 +110,7 @@ function newsAnmiate() {
 }
 
 function jumToTeacherPageByNews() {
-    alert("跳转到教师界面" + now_animate_size);
+    jumpUrl("jumpUrl?page=teacher&id="+now_animate_teacher_id);
 }
 
 function clickNews(select_animate_size) {

@@ -6,9 +6,13 @@
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="sex" jdbcType="INTEGER" property="sex" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
-    <result column="teacherInfo" jdbcType="VARCHAR" property="teacherinfo" />
     <result column="teacherShortInfo" jdbcType="VARCHAR" property="teachershortinfo" />
+    <result column="teacherInfo" jdbcType="VARCHAR" property="teacherinfo" />
+    <result column="teacherInfo2" jdbcType="VARCHAR" property="teacherinfo2" />
+    <result column="teacherInfo3" jdbcType="VARCHAR" property="teacherinfo3" />
     <result column="ranking" jdbcType="INTEGER" property="ranking" />
+    <result column="teacher_page_pic_1" jdbcType="VARCHAR" property="teacherPagePic1" />
+    <result column="teacher_page_pic_2" jdbcType="VARCHAR" property="teacherPagePic2" />
     <result column="pic1" jdbcType="VARCHAR" property="pic1" />
     <result column="pic2" jdbcType="VARCHAR" property="pic2" />
     <result column="pic3" jdbcType="VARCHAR" property="pic3" />
@@ -77,8 +81,9 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, name, sex, phone, teacherInfo, teacherShortInfo, ranking, pic1, pic2, pic3, pic4, 
-    pic5, index_range, index_show, instrument
+    id, name, sex, phone, teacherShortInfo, teacherInfo, teacherInfo2, teacherInfo3, 
+    ranking, teacher_page_pic_1, teacher_page_pic_2, pic1, pic2, pic3, pic4, pic5, index_range, 
+    index_show, instrument
   </sql>
   <select id="selectByExample" parameterType="com.Hesher.pojo.TeacherExample" resultMap="BaseResultMap">
     select
@@ -112,15 +117,19 @@
   </delete>
   <insert id="insert" parameterType="com.Hesher.pojo.Teacher">
     insert into teacher (id, name, sex, 
-      phone, teacherInfo, teacherShortInfo, 
-      ranking, pic1, pic2, 
-      pic3, pic4, pic5, index_range, 
-      index_show, instrument)
+      phone, teacherShortInfo, teacherInfo, 
+      teacherInfo2, teacherInfo3, ranking, 
+      teacher_page_pic_1, teacher_page_pic_2, pic1, 
+      pic2, pic3, pic4, pic5, 
+      index_range, index_show, instrument
+      )
     values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{sex,jdbcType=INTEGER}, 
-      #{phone,jdbcType=VARCHAR}, #{teacherinfo,jdbcType=VARCHAR}, #{teachershortinfo,jdbcType=VARCHAR}, 
-      #{ranking,jdbcType=INTEGER}, #{pic1,jdbcType=VARCHAR}, #{pic2,jdbcType=VARCHAR}, 
-      #{pic3,jdbcType=VARCHAR}, #{pic4,jdbcType=VARCHAR}, #{pic5,jdbcType=VARCHAR}, #{indexRange,jdbcType=INTEGER}, 
-      #{indexShow,jdbcType=INTEGER}, #{instrument,jdbcType=VARCHAR})
+      #{phone,jdbcType=VARCHAR}, #{teachershortinfo,jdbcType=VARCHAR}, #{teacherinfo,jdbcType=VARCHAR}, 
+      #{teacherinfo2,jdbcType=VARCHAR}, #{teacherinfo3,jdbcType=VARCHAR}, #{ranking,jdbcType=INTEGER}, 
+      #{teacherPagePic1,jdbcType=VARCHAR}, #{teacherPagePic2,jdbcType=VARCHAR}, #{pic1,jdbcType=VARCHAR}, 
+      #{pic2,jdbcType=VARCHAR}, #{pic3,jdbcType=VARCHAR}, #{pic4,jdbcType=VARCHAR}, #{pic5,jdbcType=VARCHAR}, 
+      #{indexRange,jdbcType=INTEGER}, #{indexShow,jdbcType=INTEGER}, #{instrument,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.Hesher.pojo.Teacher">
     insert into teacher
@@ -137,14 +146,26 @@
       <if test="phone != null">
         phone,
       </if>
-      <if test="teacherinfo != null">
-        teacherInfo,
-      </if>
       <if test="teachershortinfo != null">
         teacherShortInfo,
       </if>
+      <if test="teacherinfo != null">
+        teacherInfo,
+      </if>
+      <if test="teacherinfo2 != null">
+        teacherInfo2,
+      </if>
+      <if test="teacherinfo3 != null">
+        teacherInfo3,
+      </if>
       <if test="ranking != null">
         ranking,
+      </if>
+      <if test="teacherPagePic1 != null">
+        teacher_page_pic_1,
+      </if>
+      <if test="teacherPagePic2 != null">
+        teacher_page_pic_2,
       </if>
       <if test="pic1 != null">
         pic1,
@@ -184,14 +205,26 @@
       <if test="phone != null">
         #{phone,jdbcType=VARCHAR},
       </if>
-      <if test="teacherinfo != null">
-        #{teacherinfo,jdbcType=VARCHAR},
-      </if>
       <if test="teachershortinfo != null">
         #{teachershortinfo,jdbcType=VARCHAR},
       </if>
+      <if test="teacherinfo != null">
+        #{teacherinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="teacherinfo2 != null">
+        #{teacherinfo2,jdbcType=VARCHAR},
+      </if>
+      <if test="teacherinfo3 != null">
+        #{teacherinfo3,jdbcType=VARCHAR},
+      </if>
       <if test="ranking != null">
         #{ranking,jdbcType=INTEGER},
+      </if>
+      <if test="teacherPagePic1 != null">
+        #{teacherPagePic1,jdbcType=VARCHAR},
+      </if>
+      <if test="teacherPagePic2 != null">
+        #{teacherPagePic2,jdbcType=VARCHAR},
       </if>
       <if test="pic1 != null">
         #{pic1,jdbcType=VARCHAR},
@@ -240,14 +273,26 @@
       <if test="record.phone != null">
         phone = #{record.phone,jdbcType=VARCHAR},
       </if>
-      <if test="record.teacherinfo != null">
-        teacherInfo = #{record.teacherinfo,jdbcType=VARCHAR},
-      </if>
       <if test="record.teachershortinfo != null">
         teacherShortInfo = #{record.teachershortinfo,jdbcType=VARCHAR},
       </if>
+      <if test="record.teacherinfo != null">
+        teacherInfo = #{record.teacherinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.teacherinfo2 != null">
+        teacherInfo2 = #{record.teacherinfo2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.teacherinfo3 != null">
+        teacherInfo3 = #{record.teacherinfo3,jdbcType=VARCHAR},
+      </if>
       <if test="record.ranking != null">
         ranking = #{record.ranking,jdbcType=INTEGER},
+      </if>
+      <if test="record.teacherPagePic1 != null">
+        teacher_page_pic_1 = #{record.teacherPagePic1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.teacherPagePic2 != null">
+        teacher_page_pic_2 = #{record.teacherPagePic2,jdbcType=VARCHAR},
       </if>
       <if test="record.pic1 != null">
         pic1 = #{record.pic1,jdbcType=VARCHAR},
@@ -284,9 +329,13 @@
       name = #{record.name,jdbcType=VARCHAR},
       sex = #{record.sex,jdbcType=INTEGER},
       phone = #{record.phone,jdbcType=VARCHAR},
-      teacherInfo = #{record.teacherinfo,jdbcType=VARCHAR},
       teacherShortInfo = #{record.teachershortinfo,jdbcType=VARCHAR},
+      teacherInfo = #{record.teacherinfo,jdbcType=VARCHAR},
+      teacherInfo2 = #{record.teacherinfo2,jdbcType=VARCHAR},
+      teacherInfo3 = #{record.teacherinfo3,jdbcType=VARCHAR},
       ranking = #{record.ranking,jdbcType=INTEGER},
+      teacher_page_pic_1 = #{record.teacherPagePic1,jdbcType=VARCHAR},
+      teacher_page_pic_2 = #{record.teacherPagePic2,jdbcType=VARCHAR},
       pic1 = #{record.pic1,jdbcType=VARCHAR},
       pic2 = #{record.pic2,jdbcType=VARCHAR},
       pic3 = #{record.pic3,jdbcType=VARCHAR},
@@ -311,14 +360,26 @@
       <if test="phone != null">
         phone = #{phone,jdbcType=VARCHAR},
       </if>
-      <if test="teacherinfo != null">
-        teacherInfo = #{teacherinfo,jdbcType=VARCHAR},
-      </if>
       <if test="teachershortinfo != null">
         teacherShortInfo = #{teachershortinfo,jdbcType=VARCHAR},
       </if>
+      <if test="teacherinfo != null">
+        teacherInfo = #{teacherinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="teacherinfo2 != null">
+        teacherInfo2 = #{teacherinfo2,jdbcType=VARCHAR},
+      </if>
+      <if test="teacherinfo3 != null">
+        teacherInfo3 = #{teacherinfo3,jdbcType=VARCHAR},
+      </if>
       <if test="ranking != null">
         ranking = #{ranking,jdbcType=INTEGER},
+      </if>
+      <if test="teacherPagePic1 != null">
+        teacher_page_pic_1 = #{teacherPagePic1,jdbcType=VARCHAR},
+      </if>
+      <if test="teacherPagePic2 != null">
+        teacher_page_pic_2 = #{teacherPagePic2,jdbcType=VARCHAR},
       </if>
       <if test="pic1 != null">
         pic1 = #{pic1,jdbcType=VARCHAR},
@@ -352,9 +413,13 @@
     set name = #{name,jdbcType=VARCHAR},
       sex = #{sex,jdbcType=INTEGER},
       phone = #{phone,jdbcType=VARCHAR},
-      teacherInfo = #{teacherinfo,jdbcType=VARCHAR},
       teacherShortInfo = #{teachershortinfo,jdbcType=VARCHAR},
+      teacherInfo = #{teacherinfo,jdbcType=VARCHAR},
+      teacherInfo2 = #{teacherinfo2,jdbcType=VARCHAR},
+      teacherInfo3 = #{teacherinfo3,jdbcType=VARCHAR},
       ranking = #{ranking,jdbcType=INTEGER},
+      teacher_page_pic_1 = #{teacherPagePic1,jdbcType=VARCHAR},
+      teacher_page_pic_2 = #{teacherPagePic2,jdbcType=VARCHAR},
       pic1 = #{pic1,jdbcType=VARCHAR},
       pic2 = #{pic2,jdbcType=VARCHAR},
       pic3 = #{pic3,jdbcType=VARCHAR},

@@ -44,19 +44,7 @@
                              type="XMLMAPPER"></javaClientGenerator>
 
         <!-- table标签可以有多个，至少一个，tableName指定表名，可以使用_和%通配符 -->
-        <table tableName="left_menu">
-            <!-- 是否只生成POJO对象 -->
-            <property name="modelOnly" value="false"/>
-            <!-- 数据库中表名有前缀，而实体又不想带前缀，这个配置可以把实体的前缀去掉 -->
-            <!-- <domainObjectRenamingRule searchString="^sys" replaceString=""/> -->
-        </table>
-        <table tableName="teacher">
-            <!-- 是否只生成POJO对象 -->
-            <property name="modelOnly" value="false"/>
-            <!-- 数据库中表名有前缀，而实体又不想带前缀，这个配置可以把实体的前缀去掉 -->
-            <!-- <domainObjectRenamingRule searchString="^sys" replaceString=""/> -->
-        </table>
-        <table tableName="wechatgong">
+        <table tableName="video_show">
             <!-- 是否只生成POJO对象 -->
             <property name="modelOnly" value="false"/>
             <!-- 数据库中表名有前缀，而实体又不想带前缀，这个配置可以把实体的前缀去掉 -->

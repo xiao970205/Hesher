@@ -211,7 +211,7 @@ function leftMenuBoxCreateChildMenuMouseOn(event) {
  */
 function jumpUrl(url) {
     // 跳转链接
-    alert(url);
+    window.location.href=url;
 };
 
 /**
@@ -332,8 +332,6 @@ function leftMenuMobleFoder(event) {
     var isHidden = 1;
     for (var i = 0; i < childrenNodes.length; i++) {
         var childId = childrenNodes.get(i).id;
-        console.log(childId.indexOf(id));
-        console.log($("#" + childId).css("height"));
         if (childId.indexOf(id) != -1 && childId != id && $("#" + childId).css("height") != "0px") {
             //存在展开的
             isHidden = 0;
@@ -361,11 +359,11 @@ function leftMenuMobleFoder(event) {
 }
 
 function jumpToTeachPage(event) {
-    alert("跳转到乐器教学页面");
+    // alert("跳转到乐器教学页面");
 }
 
 function jumpToVideoPage(event) {
-    alert("跳转到视频页面");
+    jumpUrl("jumpUrl?page=video");
 }
 
 //电脑浏览器模式判断是否需要隐藏headdown以及headup颜色变化
@@ -436,7 +434,7 @@ function openOrCloseLeftMenu() {
  * 关闭右侧微信二维码图片
  */
 function closeWeChatPic() {
-    document.getElementById('weChatModel').style.display = "none";
+    $("#weChatModel").css("display","none");
 };
 
 /**
