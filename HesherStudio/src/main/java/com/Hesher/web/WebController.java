@@ -57,14 +57,12 @@ public class WebController {
             jsonObject.put("id", teacher.getId());
             jsonArray.add(jsonObject);
         }
-        System.out.println(jsonArray.toString());
         return jsonArray.toString();
     }
 
     @RequestMapping("/getHeaderLeftMenuInfo")
     @ResponseBody
     public String getHeaderLeftMenuInfo() {
-        System.out.println(getLeftMenu(null));
         return getLeftMenu(null).toString();
     }
 

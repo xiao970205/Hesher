@@ -170,3 +170,13 @@
     margin: 5px 0px;
     border-radius: 20px;
 }
+.teacher_page_video_show{
+    width: 25vw;
+    height: 18vw;
+}
+.teacher_page_show_er_pic{
+    background: url("../pic/douyinEr.png");
+    background-size: cover;
+    width: 18vw;
+    height: 18vw;
+}

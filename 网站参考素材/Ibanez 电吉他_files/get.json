@@ -1,0 +1,332 @@
+youkuPlayer_call_1599766761945({
+  "cost": 0.039000000804662704,
+  "data": {
+    "preview": {
+      "thumb": [
+        "http://g4.ykimg.com/052100015A7A62EC8B78DE1AC2077E16"
+      ],
+      "timespan": "6000"
+    },
+    "controller": {
+      "comment_disable": false,
+      "ad_https": 0,
+      "download_disable_tudou": false,
+      "download_disable": false,
+      "app_disable": false,
+      "new_core": false,
+      "post_process": false,
+      "buy_guide": false,
+      "continuous": false,
+      "tipSwitch": false,
+      "download_status": "[\"allowed\"]",
+      "share_disable": false,
+      "is_phone_stream": "0",
+      "play_mode": 1,
+      "like_disabled": false,
+      "baipai_source": "",
+      "circle": false,
+      "pay_info_ext": "{\"can_play\":true}",
+      "stream_mode": 1,
+      "video_capture": true
+    },
+    "watermark": [
+      {
+        "displayDTOS": [
+          {
+            "duration": 0,
+            "posX": 44,
+            "posY": 44,
+            "start": 0,
+            "width": 275,
+            "height": 40
+          }
+        ],
+        "rsUrl": "https://ykimg.alicdn.com/product/image/2020-06-11/0c49047b7976e4d7478733a32bdd4c6f.png",
+        "alpha": 1,
+        "type": 0,
+        "refWnd": 0,
+        "displayMode": 1,
+        "rsType": 0,
+        "autoScale": 1,
+        "refCoord": 1
+      },
+      {
+        "displayDTOS": [
+          {
+            "duration": 0,
+            "posX": 28,
+            "posY": 28,
+            "start": 0,
+            "width": 157,
+            "height": 24
+          }
+        ],
+        "rsUrl": "https://ykimg.alicdn.com/product/image/2020-06-11/1b2e4b4ee80327d2d41d6a74fd705643.png",
+        "alpha": 1,
+        "type": 0,
+        "refWnd": 0,
+        "displayMode": 0,
+        "rsType": 0,
+        "autoScale": 1,
+        "refCoord": 1
+      }
+    ],
+    "playlog": {
+      "lastpoint": "0"
+    },
+    "bresults": "{\"adItem\":{},\"clarityAll\":{\"default\":[\"mp4hd3v2\",\"mp4hd2v2\",\"mp4hd\",\"mp4sd\",\"3gphd\"]},\"clarityStream\":{\"default\":[{\"streamType\":\"mp4hd2v2\"},{\"streamType\":\"mp4sd\"},{\"streamType\":\"3gphd\"},{\"streamType\":\"mp4hd\"}]},\"streamInfoDtoList\":[{\"drmType\":\"default\",\"hlsSubtitleLang\":\"default\",\"langcode\":\"default\"}],\"upStreamCodeList\":[]}",
+    "video": {
+      "category_letter_id": "f",
+      "limited": 0,
+      "privacy": "anybody",
+      "stream_types": {
+        "default": [
+          "mp4hd3v2",
+          "mp4hd2v2",
+          "mp4hd",
+          "mp4sd",
+          "3gphd"
+        ]
+      },
+      "title": "Ibanez2018年限量版Joe Satriani30周年签名款JS1CR30",
+      "type": [
+        "bullet"
+      ],
+      "stream_ext": {
+        "default": {
+          "mp4sd": {
+            "size": 6903321,
+            "resolu": 360,
+            "fps": 25
+          },
+          "3gphd": {
+            "size": 4726505,
+            "resolu": 270,
+            "fps": 25
+          },
+          "mp4hd2v2": {
+            "size": 21055488,
+            "resolu": 720,
+            "fps": 25
+          },
+          "mp4hd": {
+            "size": 12535348,
+            "resolu": 540,
+            "fps": 25
+          },
+          "mp4hd3v2": {
+            "size": 37950043,
+            "resolu": 1080,
+            "fps": 25
+          }
+        }
+      },
+      "userid": 83302113,
+      "encodeid": "XMzM4NTE2NzA4NA==",
+      "tags": [],
+      "uid": 83302113,
+      "seconds": 171.07,
+      "category_id": 95,
+      "ctype": "UGC",
+      "weburl": "http://v.youku.com/v_show/id_XMzM4NTE2NzA4NA==.html",
+      "audioOnly": 0,
+      "drm_type": "default",
+      "logo": "https://vthumb.ykimg.com/054108085A7A62CD0000013BFD04D6B8",
+      "videoid_play": 846291771,
+      "id": 846291771,
+      "subcategories": [
+        {
+          "name": "欧美",
+          "id": "2124"
+        }
+      ],
+      "st_sorted": 1,
+      "username": "IbanezOfficial"
+    },
+    "network": {
+      "country_code": "CN",
+      "province": "河北省",
+      "area_code": "130100",
+      "isp": "电信",
+      "dma_code": "4134"
+    },
+    "dvd": {
+      "vertical_style": false
+    },
+    "stream": [
+      {
+        "audio_lang": "default",
+        "milliseconds_audio": 171058,
+        "milliseconds_video": 171000,
+        "segs": [
+          {
+            "size": 21055488,
+            "cdn_url": "http://ykugc.cp31.ott.cibntv.net/6977ACF8C5037716E28545D30/03000B01005A7A62CB6B3F304F716E9836C3B1-E462-47D5-9CDE-D5CA684AD399.mp4?ccode=0512&duration=171&expire=18000&psid=e883422c4339265b78e151e84ee34a0c4109c&ups_client_netip=7cecf633&ups_ts=1599766728&ups_userid=&utid=73PKF24FTzwCAXzs9wXgAsU7&vid=XMzM4NTE2NzA4NA&vkey=Bf183f11ad27f1520177844a6cc24e103&eo=1&rid=20000000BF7E0BD3B433882E0A739DE5867F119802000000&bc=2&dre=u21&si=42&dst=1",
+            "total_milliseconds_video": 171000,
+            "total_milliseconds_audio": 171058,
+            "secret": "6977ACF8C5037716E28545D30",
+            "key": "af6a199d32a3b6732621e74a",
+            "fileid": "03000B01005A7A62CB6B3F304F716E9836C3B1-E462-47D5-9CDE-D5CA684AD399"
+          }
+        ],
+        "stream_ext": {
+          "hls_subtitle": "default",
+          "subtitle_lang": "default",
+          "hls_size": 21055488,
+          "hls_duration": 171000,
+          "one_seg_flag": 1,
+          "oss_bucket": 2,
+          "hls_logo": "youku"
+        },
+        "size": 21055488,
+        "subtitle_lang": "default",
+        "media_type": "standard",
+        "drm_type": "default",
+        "stream_type": "mp4hd2v2",
+        "width": 1280,
+        "logo": "youku",
+        "m3u8_url": "http://pl-ali.youku.com/playlist/m3u8?vid=XMzM4NTE2NzA4NA&type=hd2&ups_client_netip=7cecf633&utid=73PKF24FTzwCAXzs9wXgAsU7&ccode=0512&psid=e883422c4339265b78e151e84ee34a0c4109c&duration=171&expire=18000&drm_type=1&drm_device=7&dyt=1&btf=&rid=200000009D5E0F719111D1E76BD8A414256FDAA602000000&ups_ts=1599766728&onOff=0&encr=0&ups_key=6cc9eca93fa80c8774feadbb16d7f53f",
+        "height": 720
+      },
+      {
+        "audio_lang": "default",
+        "milliseconds_audio": 171058,
+        "milliseconds_video": 171066,
+        "segs": [
+          {
+            "size": 6903321,
+            "cdn_url": "http://ykugc.cp31.ott.cibntv.net/67763DAA7923C71900F9F3D51/03000A01005A7A62CB6B3F304F716EEF1F8FA9-81BE-42AA-B186-D91975A88FDA.mp4?ccode=0512&duration=171&expire=18000&psid=e883422c4339265b78e151e84ee34a0c4109c&ups_client_netip=7cecf633&ups_ts=1599766728&ups_userid=&utid=73PKF24FTzwCAXzs9wXgAsU7&vid=XMzM4NTE2NzA4NA&vkey=Bcbfc0d9183b4fc0395ce7f1719123a02&eo=1&rid=20000000CAB8A64F6B6F999D40AA0E5747802BEF02000000&bc=2&dre=u21&si=42&dst=1",
+            "total_milliseconds_video": 171066,
+            "total_milliseconds_audio": 171058,
+            "secret": "67763DAA7923C71900F9F3D51",
+            "key": "b308d4a885f91a3924145792",
+            "fileid": "03000A01005A7A62CB6B3F304F716EEF1F8FA9-81BE-42AA-B186-D91975A88FDA"
+          }
+        ],
+        "stream_ext": {
+          "hls_subtitle": "default",
+          "subtitle_lang": "default",
+          "hls_size": 6903321,
+          "hls_duration": 171066,
+          "one_seg_flag": 1,
+          "oss_bucket": 2,
+          "hls_logo": "youku"
+        },
+        "size": 6903321,
+        "subtitle_lang": "default",
+        "media_type": "standard",
+        "drm_type": "default",
+        "stream_type": "mp4sd",
+        "width": 640,
+        "logo": "youku",
+        "m3u8_url": "http://pl-ali.youku.com/playlist/m3u8?vid=XMzM4NTE2NzA4NA&type=flv&ups_client_netip=7cecf633&utid=73PKF24FTzwCAXzs9wXgAsU7&ccode=0512&psid=e883422c4339265b78e151e84ee34a0c4109c&duration=171&expire=18000&drm_type=1&drm_device=7&dyt=1&btf=&rid=200000002AA0FEE8D5D069DF997DE5EE711ED10B02000000&ups_ts=1599766728&onOff=0&encr=0&ups_key=b2b56563798b36dfdd18c2bdf1474a2e",
+        "height": 360
+      },
+      {
+        "audio_lang": "default",
+        "milliseconds_audio": 171194,
+        "milliseconds_video": 171066,
+        "segs": [
+          {
+            "size": 4726505,
+            "cdn_url": "http://ykugc.cp31.ott.cibntv.net/67765CFA54B4771DAA60F2B08/03002001005A7A62CB6B3F304F716E130D89E4-F32F-47E4-B6BE-599A57258B0A.mp4?ccode=0512&duration=171&expire=18000&psid=e883422c4339265b78e151e84ee34a0c4109c&ups_client_netip=7cecf633&ups_ts=1599766728&ups_userid=&utid=73PKF24FTzwCAXzs9wXgAsU7&vid=XMzM4NTE2NzA4NA&vkey=B6a55d8198526cdc5a3d3638a310f410e&eo=1&rid=200000001C0E6D7F6BB6279E7162CC8ADD1EA48A02000000&bc=2&dre=u21&si=42&dst=1",
+            "total_milliseconds_video": 171066,
+            "total_milliseconds_audio": 171194,
+            "secret": "67765CFA54B4771DAA60F2B08",
+            "key": "af6a199d32a3b6732621e74a",
+            "fileid": "03002001005A7A62CB6B3F304F716E130D89E4-F32F-47E4-B6BE-599A57258B0A"
+          }
+        ],
+        "stream_ext": {
+          "hls_subtitle": "default",
+          "subtitle_lang": "default",
+          "hls_size": 4726505,
+          "hls_duration": 171066,
+          "one_seg_flag": 1,
+          "oss_bucket": 2,
+          "hls_logo": "youku"
+        },
+        "size": 4726505,
+        "subtitle_lang": "default",
+        "media_type": "standard",
+        "drm_type": "default",
+        "stream_type": "3gphd",
+        "width": 480,
+        "logo": "youku",
+        "m3u8_url": "http://pl-ali.youku.com/playlist/m3u8?vid=XMzM4NTE2NzA4NA&type=mp4&ups_client_netip=7cecf633&utid=73PKF24FTzwCAXzs9wXgAsU7&ccode=0512&psid=e883422c4339265b78e151e84ee34a0c4109c&duration=171&expire=18000&drm_type=1&drm_device=7&dyt=1&btf=&rid=20000000704F68B489E6D2EE82A1CE66C557F54702000000&ups_ts=1599766728&onOff=0&encr=0&ups_key=04ffb4771bd30a557547635f0f4d4570",
+        "height": 270
+      },
+      {
+        "audio_lang": "default",
+        "milliseconds_audio": 171058,
+        "milliseconds_video": 171000,
+        "segs": [
+          {
+            "size": 12535348,
+            "cdn_url": "http://ykugc.cp31.ott.cibntv.net/6977B950CEE37716E28542288/03000801005A7A62CB6B3F304F716E83E530F1-AB31-46CD-9E69-DC9A1B38964E.mp4?ccode=0512&duration=171&expire=18000&psid=e883422c4339265b78e151e84ee34a0c4109c&ups_client_netip=7cecf633&ups_ts=1599766728&ups_userid=&utid=73PKF24FTzwCAXzs9wXgAsU7&vid=XMzM4NTE2NzA4NA&vkey=Bc895dbfeba4c665de34345c416f5a837&eo=1&rid=20000000F07EAC11F815389E50F76EFC3720A02502000000&bc=2&dre=u21&si=42&dst=1",
+            "total_milliseconds_video": 171000,
+            "total_milliseconds_audio": 171058,
+            "secret": "6977B950CEE37716E28542288",
+            "key": "4416e1a28b222e8b282f7701",
+            "fileid": "03000801005A7A62CB6B3F304F716E83E530F1-AB31-46CD-9E69-DC9A1B38964E"
+          }
+        ],
+        "stream_ext": {
+          "hls_subtitle": "default",
+          "subtitle_lang": "default",
+          "hls_size": 12535348,
+          "hls_duration": 171000,
+          "one_seg_flag": 1,
+          "oss_bucket": 2,
+          "hls_logo": "youku"
+        },
+        "size": 12535348,
+        "subtitle_lang": "default",
+        "media_type": "standard",
+        "drm_type": "default",
+        "stream_type": "mp4hd",
+        "width": 960,
+        "logo": "youku",
+        "m3u8_url": "http://pl-ali.youku.com/playlist/m3u8?vid=XMzM4NTE2NzA4NA&type=hd&ups_client_netip=7cecf633&utid=73PKF24FTzwCAXzs9wXgAsU7&ccode=0512&psid=e883422c4339265b78e151e84ee34a0c4109c&duration=171&expire=18000&drm_type=1&drm_device=7&dyt=1&btf=&rid=20000000EE130C14C01E38A3789923A1601A6D7D02000000&ups_ts=1599766728&onOff=0&encr=0&ups_key=a69c4a65ed53c675538ec5be7d55500b",
+        "height": 540
+      }
+    ],
+    "uploader": {
+      "crm_level": 2,
+      "reason": "",
+      "uid": "UMzMzMjA4NDUy",
+      "fan_count": 0,
+      "avatar": {
+        "small": "https://r1.ykimg.com/0130391F48564464B858CE04F716E158BD6F9B-9CBF-1975-26EF-2EDC9D04C587",
+        "big": "https://r1.ykimg.com/0130391F48564464B7BC8F04F716E137A74417-2659-C9A9-8B68-63740EACF160",
+        "middle": "https://r1.ykimg.com/0130391F48564464B8617D04F716E1E72F5843-9038-93A9-FD7B-A30F7F59A181",
+        "large": "https://r1.ykimg.com/0130391F48564464B7171D04F716E12B8807ED-3CE5-83C6-767C-C60CC7DB570D",
+        "xlarge": "https://r1.ykimg.com/0130391F48564464B7171D04F716E12B8807ED-3CE5-83C6-767C-C60CC7DB570D"
+      },
+      "show_brand": 0,
+      "certification": false,
+      "homepage": "http://i.youku.com/u/UMzMzMjA4NDUy",
+      "username": "IbanezOfficial"
+    },
+    "ups": {
+      "ups_ts": "1599766728",
+      "ups_client_netip": "124.236.246.51",
+      "psid": "e883422c4339265b78e151e84ee34a0c4109c"
+    },
+    "remoteDebug": [],
+    "user": {
+      "uid": "",
+      "ip": "124.236.246.51",
+      "ytid": ""
+    },
+    "adDomain": {
+      "wifi": "vali-g1.cp31.ott.cibntv.net",
+      "cellular": "m-vali.cp31.ott.cibntv.net"
+    }
+  },
+  "e": {
+    "code": 0,
+    "provider": "hsfprovider",
+    "desc": ""
+  }
+})

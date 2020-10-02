@@ -1,0 +1,6 @@
+/*!
+ *  - gdpr.js
+ * @generated Thu Mar 12 2020 13:45:46 GMT+0900 (東京 (標準時))
+ */
+"use strict";document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("header-gdpr"),t=document.getElementById("header-gdpr-in-btn"),n=document.getElementById("header-gdpr-in-close"),d=document.cookie.indexOf("gdprCookieData");d==-1&&e.classList.add("is-active"),t.addEventListener("click",function(){e.classList.remove("is-active");var t=new Date;t.setDate(t.getDate()+90),document.cookie="gdprCookieData=ok;expires="+t.toUTCString()+";path=/;"}),n.addEventListener("click",function(){e.classList.remove("is-active")})});
+//# sourceMappingURL=gdpr.js.map

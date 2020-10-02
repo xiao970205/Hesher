@@ -12,6 +12,7 @@ spring:
 #    password: 123
     username: admin
     password: MetalFans@1997
+    
   mvc:
     static-path-pattern: /**
   devtools:

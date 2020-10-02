@@ -207,9 +207,11 @@
                     <h2 class="teacher_page_down_right_page_in_h2">
                         HI! I`M <span class="teacher_page_down_right_page_in_h2_font" th:text="${name}"></span>
                     </h2>
-                    <p id="teacher_info_1"
-                       class="teacher_page_down_right_page_in_p">
-                    </p>
+                    <div id="teacher_info_page1">
+<!--                        <p id="teacher_info_1"-->
+<!--                           class="teacher_page_down_right_page_in_p">-->
+<!--                        </p>-->
+                    </div>
                     <div class="teacher_page_down_right_page_in_div">
                         <font class="teacher_page_down_right_page_in_div_font"
                               onclick="openWeChatInfo()">立即约课</font>
@@ -224,9 +226,12 @@
                     <h2 class="teacher_page_down_right_page_in_h2">
                         HI! I`M <span class="teacher_page_down_right_page_in_h2_font" th:text="${name}"></span>
                     </h2>
-                    <p id="teacher_info_2"
+                    <!-- <p id="teacher_info_2"
                        class="teacher_page_down_right_page_in_p">
-                    </p>
+                    </p> -->
+                    <div id="teacher_info_page2">
+<!--                        <iframe class="teacher_page_video_show" src="//player.bilibili.com/player.html?aid=795358583&bvid=BV19C4y1p7hY&cid=181378547&page=1"  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>-->
+                    </div>
                     <div class="teacher_page_down_right_page_in_div">
                         <font class="teacher_page_down_right_page_in_div_font"
                               onclick="openWeChatInfo()">立即约课</font>
@@ -241,9 +246,12 @@
                     <h2 class="teacher_page_down_right_page_in_h2">
                         HI! I`M <span class="teacher_page_down_right_page_in_h2_font" th:text="${name}"></span>
                     </h2>
-                    <p id="teacher_info_3"
-                       class="teacher_page_down_right_page_in_p">
-                    </p>
+                    <div id="teacher_info_page3">
+<!--                        <iframe class="teacher_page_video_show" src="//player.bilibili.com/player.html?aid=795358583&bvid=BV19C4y1p7hY&cid=181378547&page=1"  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>-->
+                    </div>
+<!--                    <p id="teacher_info_3"-->
+<!--                       class="teacher_page_down_right_page_in_p">-->
+<!--                    </p>-->
                     <div class="teacher_page_down_right_page_in_div">
                         <font class="teacher_page_down_right_page_in_div_font"
                               onclick="openWeChatInfo()">立即约课</font>
@@ -254,23 +262,23 @@
                 </div>
             </div>
         </div>
-<!--        <div class="teacher_info_dot_div">-->
-<!--            <div class="teacher_info_div_dot">-->
-<!--                <div id="teacher_info_dot_1" class="teacher_info_div_dot_style"-->
-<!--                     style="background-color: rgb(0,167,142);"-->
-<!--                     onclick="teacher_info_animate('1')"></div>-->
-<!--            </div>-->
-<!--            <div class="teacher_info_div_dot">-->
-<!--                <div id="teacher_info_dot_2" class="teacher_info_div_dot_style"-->
-<!--                     style="background-color: black;"-->
-<!--                     onclick="teacher_info_animate('2')"></div>-->
-<!--            </div>-->
-<!--            <div class="teacher_info_div_dot">-->
-<!--                <div id="teacher_info_dot_3" class="teacher_info_div_dot_style"-->
-<!--                     style="background-color: black;"-->
-<!--                     onclick="teacher_info_animate('3')"></div>-->
-<!--            </div>-->
-<!--        </div>-->
+       <div class="teacher_info_dot_div">
+           <div class="teacher_info_div_dot">
+               <div id="teacher_info_dot_1" class="teacher_info_div_dot_style"
+                    style="background-color: rgb(0,167,142);"
+                    onclick="teacher_info_animate('1')"></div>
+           </div>
+           <div class="teacher_info_div_dot">
+               <div id="teacher_info_dot_2" class="teacher_info_div_dot_style"
+                    style="background-color: black;"
+                    onclick="teacher_info_animate('2')"></div>
+           </div>
+           <div class="teacher_info_div_dot">
+               <div id="teacher_info_dot_3" class="teacher_info_div_dot_style"
+                    style="background-color: black;"
+                    onclick="teacher_info_animate('3')"></div>
+           </div>
+        </div>
     </div>
 </div>
 <!-- 地址信息 -->
@@ -282,9 +290,9 @@
         <div id="contact_info">
             <!--        <div style="width: 300px;height: 136px">-->
             <div class="button_model">
-                <div class="button_model_anime" id="button_model_anime_1">
+                <div class="button_model_anime" id="button_model_anime_1" onclick="phoneButtonClick(this)">
                     <div class="button_model_pic">
-                        <div class="address_img" onclick="phoneButtonClick(this)"
+                        <div class="address_img"
                              id="address_phone_img"></div>
                     </div>
                     <div class="button_model_font">电话</div>
@@ -300,7 +308,7 @@
             </div>
             <div class="button_model">
                 <div class="button_model_anime" id="button_model_anime_3">
-                    <div class="button_model_pic" onclick="jumpToWeiBoAndDou()">
+                    <div class="button_model_pic" onclick="jumpToWeiBoAndDou(this)">
                         <div class="address_img" id="address_weibo_img"></div>
                     </div>
                     <div class="button_model_font">微博</div>

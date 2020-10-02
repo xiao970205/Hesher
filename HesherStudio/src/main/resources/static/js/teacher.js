@@ -73,9 +73,12 @@ function initTeacherInfo(){
     $("#teacherName").text(name);
     $("#teacher_instrument").text(instrument);
     $("#short_intruduce_show").text(shortInfo);
-    $("#teacher_info_1").text(Info);
-    $("#teacher_info_2").text(Info2);
-    $("#teacher_info_3").text(Info3);
+    $("#teacher_info_page1").append(Info);
+    $("#teacher_info_page2").append(Info2);
+    $("#teacher_info_page3").append(Info3);
+    // $("#teacher_info_1").text(Info);
+    // $("#teacher_info_2").text(Info2);
+    // $("#teacher_info_3").text(Info3);
 }
 /**
  * 获取json数组长度
