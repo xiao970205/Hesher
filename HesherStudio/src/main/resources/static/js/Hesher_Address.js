@@ -61,7 +61,7 @@ function closeImg() {
 function phoneButtonClick(divInfo) {
     douDong(divInfo);
     setTimeout(() => {
-        window.open("tel:10086");
+        window.open("tel:13333110964");
     }, 300);
 }
 
@@ -76,7 +76,7 @@ function jumpToWeiBoAndDou(divInfo) {
 function onClickEmail(divInfo) {
     douDong(divInfo);
     setTimeout(() => {
-        window.open("mailto:hesherstudio@qq.com");
+        window.open("mailto:410299908@qq.com");
     }, 300);
 }
 

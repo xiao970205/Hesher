@@ -134,19 +134,19 @@ public class WebController {
         for (LeftMenu menuLeve1 : leftMenuList) {
             JSONObject jsonLeve1 = new JSONObject();
             jsonLeve1.put("name", menuLeve1.getMenuName());
-            if (menuLeve1.getMenuType().equals("child")) {
+            if ("child".equals(menuLeve1.getMenuType())) {
                 //拥有子链接
                 jsonLeve1.put("type", "child");
                 jsonLeve1.put("chlidmenu", getLeftMenu(menuLeve1.getId()));
-            } else if (menuLeve1.getMenuType().equals("wechatGong")) {
+            } else if ("wechatGong".equals(menuLeve1.getMenuType())) {
                 //微信公众号
                 jsonLeve1.put("type", "child");
                 jsonLeve1.put("chlidmenu", getWeChatLeftMenuArray());
-            } else if (menuLeve1.getMenuType().equals("jump")) {
+            } else if ("jump".equals(menuLeve1.getMenuType())) {
                 //本页跳转
                 jsonLeve1.put("type", "jump");
                 jsonLeve1.put("typeInfo", menuLeve1.getMenuJumpInfo());
-            } else if (menuLeve1.getMenuType().equals("address1")) {
+            } else if ("address1".equals(menuLeve1.getMenuType())) {
                 //弹出
                 jsonLeve1.put("type", "address1");
             }
