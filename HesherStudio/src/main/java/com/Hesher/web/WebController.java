@@ -159,7 +159,7 @@ public class WebController {
     private JSONArray getWeChatLeftMenuArray() {
         WechatgongExample example = new WechatgongExample();
         example.setOrderByClause("createTime desc LIMIT 5");
-        List<Wechatgong> wechatgongList = weChatGongService.selectByExample(example);
+        List<Wechatgong> wechatgongList = weChatGongService.selectByExampleWithBLOBs(example);
         JSONArray jsonArray = new JSONArray();
         for (Wechatgong wechatgong : wechatgongList) {
             JSONObject jsonObject = new JSONObject();

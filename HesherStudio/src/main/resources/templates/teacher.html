@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html"
       style="overflow-x: hidden;overflow-y: auto">
 <head>
-    <title>Hesher Studio 海涩文化-线上音乐教育的先行者</title>
+    <title>Teacher - 海瑟文化 - Hesher Studio</title>
     <meta charset="UTF-8">
     <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
     <link rel="shortcut icon" href="pic/favicon.ico">
@@ -116,7 +116,7 @@
     <!-- 可以隐藏的部分 -->
     <div id="head_down">
         <li class="header-nav-in">
-            <a class="top_a" href="javascript:void(0)" onclick="jumpToTeachPage()">乐器教学</a>
+            <a class="top_a" id = "top_teach" href="javascript:void(0)">乐器教学</a>
         </li>
         <li class="header-nav-in">
             <a class="top_a" href="javascript:void(0)" onclick="openAddress()">演出承接</a>
@@ -128,7 +128,7 @@
             <a class="top_a" href="javascript:void(0)" onclick="openAddress()">乐器设备销售</a>
         </li>
         <li class="header-nav-in" id="header-nav-in-end" onclick="openAddress()">
-            <a class="top_a" href="javascript:void(0)">录音服务</a>
+            <a class="top_a" href="javascript:void(0)">编曲录音服务</a>
         </li>
     </div>
 </header>
@@ -150,7 +150,7 @@
             <div class="teacher_page_up_left_rightMenu">
                 <div class="teacher_page_up_left_rightMenu_style">主页</div>
                 <div class="teacher_page_up_left_rightMenu_style">--></div>
-                <div class="teacher_page_up_left_rightMenu_style">乐器</div>
+                <div class="teacher_page_up_left_rightMenu_style">教师介绍</div>
                 <div class="teacher_page_up_left_rightMenu_style">--></div>
                 <div class="teacher_page_up_left_rightMenu_style" th:text="${name}"></div>
             </div>

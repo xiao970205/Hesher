@@ -17,7 +17,12 @@ public class WeChatGongServiceImpl {
         return wechatgongMapper.insert(record);
     }
 
-    public List<Wechatgong> selectByExample(WechatgongExample example){
-        return wechatgongMapper.selectByExample(example);
+    public List<Wechatgong> selectByExampleWithBLOBs(WechatgongExample example){
+        return wechatgongMapper.selectByExampleWithBLOBs(example);
     }
+    
+    public Wechatgong selectByPrimaryKey(String id) {
+    	return wechatgongMapper.selectByPrimaryKey(id);
+    }
+
 }

@@ -14,7 +14,12 @@ public class Wechatgong implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    public String getId() {
+    @Override
+	public String toString() {
+		return "Wechatgong [id=" + id + ", tittle=" + tittle + ", createtime=" + createtime + ", url=" + url + "]";
+	}
+
+	public String getId() {
         return id;
     }
 

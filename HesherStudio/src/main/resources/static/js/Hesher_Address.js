@@ -1,4 +1,5 @@
 function openAddress() {
+	dontclose();
     $("body").css("overflow-y", "hidden");
     $("html").css("overflow-y", "hidden");
     $("#contact").css("transform", "translateX(-0vw)");
@@ -76,7 +77,7 @@ function jumpToWeiBoAndDou(divInfo) {
 function onClickEmail(divInfo) {
     douDong(divInfo);
     setTimeout(() => {
-        window.open("mailto:410299908@qq.com");
+        window.open("mailto:hesherstudio@foxmail.com");
     }, 300);
 }
 
