@@ -149,6 +149,10 @@ public class WebController {
             } else if ("address1".equals(menuLeve1.getMenuType())) {
                 //弹出
                 jsonLeve1.put("type", "address1");
+            } else if ("address2".equals(menuLeve1.getMenuType())) {
+                //弹出
+                jsonLeve1.put("type", "address2");
+                jsonLeve1.put("picUrl", menuLeve1.getMenuJumpInfo());
             }
             jsonArray.add(jsonLeve1);
         }

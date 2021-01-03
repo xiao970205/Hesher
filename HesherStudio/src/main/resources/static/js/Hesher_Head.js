@@ -107,7 +107,6 @@ function getMenuInfo() {
  * @param fatherId
  */
 function createLeftMenuWeb(jsonArray, level, fatherId) {
-
     if (level > 2) {
         alert("左侧menu生成异常！存在4级menu！");
         return;
@@ -124,6 +123,10 @@ function createLeftMenuWeb(jsonArray, level, fatherId) {
         if (menuLeve1Json.type == "address1") {
             $("#left_menu_web" + level).append("<div class=\"left_menu_web_box_style\" id=\"" + id + "\" onclick='openAddress()'" + divNeedDisplayNone + "><span style='overflow:hidden;white-space:nowrap;text-overflow: ellipsis;color: white;" + fontNeedDisPlayNone + "'>" + menuLeve1Json.name + "</span></div>");
             $("#" + id).bind("mouseenter", {childLevl: (level + 1)}, leftMenuBoxClearChildMenuMouseOn);
+        } else if(menuLeve1Json.type == "address2"){
+            $("#left_menu_web" + level).append("<div class=\"left_menu_web_box_style\" id=\"" + id + "\"" + divNeedDisplayNone + "><span style='overflow:hidden;white-space:nowrap;text-overflow: ellipsis;color: white;" + fontNeedDisPlayNone + "'>" + menuLeve1Json.name + "</span></div>");
+            $("#" + id).bind("mouseenter", {childLevl: (level + 1)}, leftMenuBoxClearChildMenuMouseOn);
+            $("#" + id).bind("click", {picUrl: menuLeve1Json.picUrl,type:"1"}, openPic);
         } else if (menuLeve1Json.type == "jump") {
             $("#left_menu_web" + level).append("<div class=\"left_menu_web_box_style\" id=\"" + id + "\"" + divNeedDisplayNone + "><span style='overflow:hidden;white-space:nowrap;text-overflow: ellipsis;color: white;" + fontNeedDisPlayNone + "'>" + menuLeve1Json.name + "</span></div>");
             $("#" + id).bind("mouseenter", {childLevl: (level + 1)}, leftMenuBoxClearChildMenuMouseOn);
@@ -326,6 +329,12 @@ function createMobleLeftMenu(jsonArray, fatherId, level) {
                 "<div style='padding-left: 20px;padding-top: 20px'>" +
                 "<span style='font-size:18px;overflow:hidden;white-space:nowrap;text-overflow: ellipsis;color: white;" + "'>" + menuLeve1Json.name + "</span>" +
                 "</div></div>");
+        }else if(menuLeve1Json.type == "address2"){
+            $("#left_menu_moble_0").append("<div class=\"left_menu_moble_style\" id=\"" + id + "\"" + divNeedDisplayNone + ">" +
+                "<div style='padding-left: 20px;padding-top: 20px'>" +
+                "<span style='font-size:18px;overflow:hidden;white-space:nowrap;text-overflow: ellipsis;color: white;" + "'>" + menuLeve1Json.name + "</span>" +
+                "</div></div>");
+            $("#" + id).bind("click", {picUrl: menuLeve1Json.picUrl,type:"2"}, openPic);
         } else if (menuLeve1Json.type == "jump") {
             $("#left_menu_moble_0").append("<div class=\"left_menu_moble_style\" id=\"" + id + "\"" + divNeedDisplayNone + ">" +
                 "<div style='padding-left: 20px;padding-top: 20px'>" +

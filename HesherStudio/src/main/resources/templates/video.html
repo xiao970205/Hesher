@@ -47,7 +47,7 @@
         }
     </style>
 </head>
-<body onload="initPage()">
+<body onload="initPage()" ontouchstart="" onmouseover="">
 <!-- 头部标题 -->
 <header id="head">
     <!--上方部分 -->
@@ -149,7 +149,7 @@
 </div>
 
 <!-- 地址信息 -->
-<div id="contact">
+<div id="contact" onclick="closeImg()">
     <div id="contant_close_div">
         <div id="closecontact" onclick="closeImg()"></div>
     </div>
@@ -252,6 +252,7 @@
         </div>
     </div>
 </div>
+<div class = "jumpPic" onclick="closePic()"></div>
 <div id="waitingDiv" style="height: 100vh;width: 100vw;background: rgb(0,0,0)">
     <div id="waitingPic"></div>
 </div>

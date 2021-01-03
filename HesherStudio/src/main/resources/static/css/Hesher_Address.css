@@ -1,3 +1,15 @@
+.jumpPic{
+    overflow-y: auto;
+    position: fixed;
+    z-index: 999;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateX(-100vw);
+    transition-duration: 0.5s;
+}
 #contact {
     display: none;
     overflow-y: auto;
@@ -10,12 +22,12 @@
     background: rgba(0, 0, 0, 0.5);
     transform: translateX(-100vw);
     transition-duration: 0.5s;
-    -moz-transform: translateX(-100vw);
-    -moz-transition-duration: 0.5s;
-    -webkit-transform: translateX(-100vw);
-    -webkit-transition-duration: 0.5s;
-    -o-transform: translateX(-100vw);
-    -o-transition-duration: 0.5s;
+    /*-moz-transform: translateX(-100vw);*/
+    /*-moz-transition-duration: 0.5s;*/
+    /*-webkit-transform: translateX(-100vw);*/
+    /*-webkit-transition-duration: 0.5s;*/
+    /*-o-transform: translateX(-100vw);*/
+    /*-o-transition-duration: 0.5s;*/
 }
 
 #contact_info {
@@ -139,21 +151,27 @@
 }
 #address_bilibili_img{
     background-image: url("../pic/bilibili-line.svg");
+    background-repeat:no-repeat;
 }
 #address_weibo_img{
     background-image: url("../pic/weibo.svg");
+    background-repeat:no-repeat;
 }
 #address_email_img{
     background-image: url("../pic/address_email.svg");
+    background-repeat:no-repeat;
 }
 #address_phone_img{
     background-image: url("../pic/address_phone.svg");
+    background-repeat:no-repeat;
 }
 #address_wechat_img{
     background-image: url("../pic/weChat.svg");
+    background-repeat:no-repeat;
 }
 #address_douyin_img{
     background-image: url("../pic/douyin.svg");
+    background-repeat:no-repeat;
 }
 #buttom_div{
     width: 100vw;

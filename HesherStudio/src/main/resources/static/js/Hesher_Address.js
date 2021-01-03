@@ -1,3 +1,40 @@
+function openPic(event){
+    $("body").css("overflow-y", "hidden");
+    $("html").css("overflow-y", "hidden");
+    $(".jumpPic").css("transform", "translateX(-0vw)");
+    $(".jumpPic").append("<div class='openPic_pic' style = \"" +
+        "background: url('../pic/"+event.data.picUrl+"'"+") no-repeat;\n" +
+        "background-size: cover;" +
+        "position: absolute;" +
+        "left: 0;" +
+        "top: 0;" +
+        "bottom: 0;" +
+        "right: 0;" +
+        "margin: auto;" +
+        "transition: transform 0.5s;" +
+        "transform: scale(0.0)"+
+        "\"></div>");
+    if(event.data.type == "1"){
+        $(".openPic_pic").css("width","70vh");
+        $(".openPic_pic").css("height","100vh");
+    }else if(event.data.type == "2"){
+        $(".openPic_pic").css("width","100vw");
+        $(".openPic_pic").css("height","140vw");
+    }
+    setTimeout(()=>{
+        $(".openPic_pic").css("transform","scale(1.0)");
+    },500)
+
+}
+function closePic(){
+    $(".openPic_pic").css("transform","scale(0.0)");
+    setTimeout(()=>{
+        $("html").css("overflow-y", "auto");
+        $("body").css("overflow-y", "auto");
+        $(".jumpPic").css("transform", "translateX(-100vw)");
+        $(".jumpPic").empty();
+    },500);
+}
 function openAddress() {
 	dontclose();
     $("body").css("overflow-y", "hidden");
@@ -60,6 +97,7 @@ function closeImg() {
 
 
 function phoneButtonClick(divInfo) {
+    dontclose();
     douDong(divInfo);
     setTimeout(() => {
         window.open("tel:13333110964");
@@ -67,6 +105,7 @@ function phoneButtonClick(divInfo) {
 }
 
 function jumpToWeiBoAndDou(divInfo) {
+    dontclose();
     douDong(divInfo);
     setTimeout(() => {
         jumpToWeiBoPage();
@@ -75,6 +114,7 @@ function jumpToWeiBoAndDou(divInfo) {
 }
 
 function onClickEmail(divInfo) {
+    dontclose();
     douDong(divInfo);
     setTimeout(() => {
         window.open("mailto:hesherstudio@foxmail.com");
@@ -84,6 +124,7 @@ function onClickEmail(divInfo) {
 var WechatPicOpen = 0;
 
 function weChatClick(divInfo) {
+    dontclose()
     if (divInfo != null) {
         douDong(divInfo);
     }
@@ -103,6 +144,7 @@ function weChatClick(divInfo) {
 var DouYinPicOpen = 0;
 
 function douYinCLick(divInfo) {
+    dontclose();
     if (divInfo != null) {
         douDong(divInfo);
     }
@@ -120,6 +162,7 @@ function douYinCLick(divInfo) {
 }
 
 function jumpToBiliBililAndAnmite(divInfo) {
+    dontclose();
     douDong(divInfo);
     setTimeout(() => {
         jumpToBiBiliPage();
@@ -128,10 +171,15 @@ function jumpToBiliBililAndAnmite(divInfo) {
 
 function douDong(divInfo) {
     $(divInfo).css("transform", "translateY(-2vw)");
+    // $(divInfo).css("-webkit-transform", "translateY(-2vw)");
     $(divInfo).css("transition-duration", "0.1s");
+    // $(divInfo).css("-webkit-transition-duration", "0.1s");
     $(divInfo).css("transition-timing-function", "ease-out");
+    // $(divInfo).css("-webkit-transition-timing-function", "ease-out");
     setTimeout(() => {
         $(divInfo).css("transform", "translateY(0vw)");
+        // $(divInfo).css("-webkit-transform", "translateY(0vw)");
         $(divInfo).css("transition-duration", "0.1s");
+        // $(divInfo).css("-webkit-transition-duration", "0.1s");
     }, 100);
 }
