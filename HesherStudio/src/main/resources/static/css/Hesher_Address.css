@@ -10,6 +10,30 @@
     transform: translateX(-100vw);
     transition-duration: 0.5s;
 }
+.getWeChatPic{
+    overflow-y: auto;
+    position: fixed;
+    z-index: 999;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateX(-100vw);
+    transition-duration: 0.5s;
+}
+.getWeChatPic_pic{
+    background: url("../pic/weChatImg.jpg") no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    transition: transform 0.5s;
+    transform: scale(0.0);
+}
 #contact {
     display: none;
     overflow-y: auto;
@@ -50,7 +74,8 @@
     height: 106px;
     padding-left: 20px;
     padding-right: 20px;
-    margin: auto;
+    margin-left: 15px;
+    margin-right: 15px;
     top: 50px;
     transition: transform 0.5s;
 }
@@ -60,6 +85,7 @@
     height: 80px;
     background-color: rgb(119, 191, 163);
     border-radius: 50%;
+    transition: transform 0.1s;
 }
 
 .button_model_font {
@@ -70,35 +96,42 @@
 }
 
 #button_model_anime_1 {
-    transform: translate(-80vw, -80vh);
+    transform: scale(0.0);
+    /*transform: translate(-80vw, -80vh);*/
 }
 
 #button_model_anime_2 {
-    transform: translate(80vw, -80vh);
+    transform: scale(0.0);
+    /*transform: translate(80vw, -80vh);*/
 }
 
 #button_model_anime_3 {
-    transform: translate(-80vw, 0vh);
+    transform: scale(0.0);
+    /*transform: translate(-80vw, 0vh);*/
 }
 
 #button_model_anime_4 {
-    transform: translate(80vw, 0vh);
+    transform: scale(0.0);
+    /*transform: translate(80vw, 0vh);*/
 }
 
 #button_model_anime_5 {
-    transform: translate(-80vw, 80vh);
+    transform: scale(0.0);
+    /*transform: translate(-80vw, 80vh);*/
 }
 
 #button_model_anime_6 {
-    transform: translate(80vw, 80vh);
+    transform: scale(0.0);
+    /*transform: translate(80vw, 80vh);*/
 }
 #contact_weChat_div{
     width: 300px;
     height: 0px;
     float: left;
     background-size: cover;
-    transition: transform,height 0.5s;
-    transform: translateY(80vh);
+    transition: height 0.5s;
+    transition: transform 0.5s;
+    transform: scale(0.0);
     overflow: hidden;
 }
 #contact_DouYin_div{
@@ -107,7 +140,8 @@
     float: left;
     background-size: cover;
     transition: transform,height 0.5s;
-    transform: translateY(80vh);
+    transition: transform 0.5s;
+    transform: scale(0.0);
     overflow: hidden;
 }
 #contact_weChat_img{
@@ -146,8 +180,8 @@
     height: 60px;
     background-size: cover;
     position: absolute;
-    margin-top:10px;
-    margin-left: 10px;
+    transition: transform 0.5s;
+    margin: 10px 10px 10px 10px;
 }
 #address_bilibili_img{
     background-image: url("../pic/bilibili-line.svg");

@@ -5,6 +5,14 @@ var bilibiliUrl = "https://space.bilibili.com/3113010?from=search&seid=117226972
 //头部左侧Menu信息
 var leftMenuInfo = null;
 
+// 判断横屏竖屏
+function orient() {
+    if (window.orientation == 90 || window.orientation == -90) {
+    //ipad、iphone竖屏；Andriod横屏
+    } else if (window.orientation == 0 || window.orientation == 180) {
+    //ipad、iphone横屏；Andriod竖屏
+    }
+}
 //打开哔哩哔哩
 function jumpToBiBiliPage() {
     window.open(bilibiliUrl);
@@ -22,7 +30,7 @@ function initHeaderModel() {
     var scarmWidth = $(window).width();
     //初始化左侧menu信息
     getMenuInfo();
-    if (scarmWidth <= 1024) {
+    if (window.orientation == 0 || window.orientation == 180) {
         //手机端
         //隐藏head_down部分
         $("#head_down").css("display","none");
@@ -365,6 +373,7 @@ function createMobleLeftMenu(jsonArray, fatherId, level) {
  * @param event
  */
 function leftMenuMobleFoder(event) {
+    dontclose();
     var id = event.data.id;
     var childrenNodes = $("#left_menu_moble_0").children();
     var isHidden = 1;
@@ -405,8 +414,7 @@ function jumpToVideoPage(event) {
 var opacityValue = 0;
 
 $(window).scroll(function () {
-    var scarmWidth = $(window).width();
-    if (scarmWidth <= 1024) {
+    if (window.orientation == 0 || window.orientation == 180) {
         // 手机模式
         return;
     }
@@ -464,13 +472,6 @@ function openOrCloseLeftMenu() {
         $("body").css("overflow-y", "auto");
     }
 }
-
-/**
- * 关闭右侧微信二维码图片
- */
-function closeWeChatPic() {
-    $("#weChatModel").css("display","none");
-};
 
 /**
  * 渐变动画效果

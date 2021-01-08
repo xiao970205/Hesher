@@ -1,3 +1,6 @@
+$(window).bind( 'orientationchange', function(e){
+    location.reload();
+});
 //初始化方法
 function initPage() {
     initHeaderModel();

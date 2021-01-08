@@ -1,4 +1,5 @@
 function openPic(event){
+    dontclose();
     $("body").css("overflow-y", "hidden");
     $("html").css("overflow-y", "hidden");
     $(".jumpPic").css("transform", "translateX(-0vw)");
@@ -50,14 +51,16 @@ function openAddress() {
     $("#contact_DouYin_div").css("display", "block");
     $("#closecontact").css({"display": "block"});
     setTimeout(() => {
-        $("#button_model_anime_1").css({"transform": "translate(0vh,0vw)"});
-        $("#button_model_anime_2").css({"transform": "translate(0vh,0vw)"});
-        $("#button_model_anime_3").css({"transform": "translate(0vh,0vw)"});
-        $("#button_model_anime_4").css({"transform": "translate(0vh,0vw)"});
-        $("#button_model_anime_5").css({"transform": "translate(0vh,0vw)"});
-        $("#button_model_anime_6").css({"transform": "translate(0vh,0vw)"});
-        $("#contact_weChat_div").css({"transform": "translateY(0vh)"});
-        $("#contact_DouYin_div").css({"transform": "translateY(0vh)"});
+        $("#button_model_anime_1").css({"transform": "scale(1.0)"});
+        $("#button_model_anime_2").css({"transform": "scale(1.0)"});
+        $("#button_model_anime_3").css({"transform": "scale(1.0)"});
+        $("#button_model_anime_4").css({"transform": "scale(1.0)"});
+        $("#button_model_anime_5").css({"transform": "scale(1.0)"});
+        $("#button_model_anime_6").css({"transform": "scale(1.0)"});
+        // $("#contact_weChat_div").css({"transform": "translateY(0vh)"});
+        $("#contact_weChat_div").css({"transform": "scale(0.0)"});
+        // $("#contact_DouYin_div").css({"transform": "translateY(0vh)"});
+        $("#contact_DouYin_div").css({"transform": "scale(0.0)"});
         $("#closecontact").css({"transform": "scale(1.0)"});
     }, 300);
 }
@@ -65,15 +68,17 @@ function openAddress() {
 function closeImg() {
     $("html").css("overflow-y", "auto");
     $("body").css("overflow-y", "auto");
-    $("#button_model_anime_1").css({"transform": "translate(-80vh,-80vw)"});
-    $("#button_model_anime_2").css({"transform": "translate(80vh,-80vw)"});
-    $("#button_model_anime_3").css({"transform": "translate(-80vh,0vw)"});
-    $("#button_model_anime_4").css({"transform": "translate(80vh,0vw)"});
+    $("#button_model_anime_1").css({"transform": "scale(0.0)"});
+    $("#button_model_anime_2").css({"transform": "scale(0.0)"});
+    $("#button_model_anime_3").css({"transform": "scale(0.0)"});
+    $("#button_model_anime_4").css({"transform": "scale(0.0)"});
     ;
-    $("#button_model_anime_5").css({"transform": "translate(-80vh,80vw)"});
-    $("#button_model_anime_6").css({"transform": "translate(80vh,80vw)"});
-    $("#contact_weChat_div").css({"transform": "translateY(80vh)"});
-    $("#contact_DouYin_div").css({"transform": "translateY(80vh)"});
+    $("#button_model_anime_5").css({"transform": "scale(0.0)"});
+    $("#button_model_anime_6").css({"transform": "scale(0.0)"});
+    // $("#contact_weChat_div").css({"transform": "translateY(80vh)"});
+    $("#contact_weChat_div").css({"transform": "scale(1.0)"});
+    // $("#contact_DouYin_div").css({"transform": "translateY(80vh)"});
+    $("#contact_DouYin_div").css({"transform": "scale(1.0)"});
     $("#closecontact").css({"transform": "scale(0.1)"});
     if (WechatPicOpen == 1) {
         weChatClick(null);
@@ -131,11 +136,13 @@ function weChatClick(divInfo) {
     setTimeout(() => {
         if (WechatPicOpen == 0) {
             //打开微信二维码
-            $("#contact_weChat_div").css({"height": "340px"});
+            $("#contact_weChat_div").animate({height:'340px'},500);
+            $("#contact_weChat_div").css({"transform": "scale(1.0)"});
             WechatPicOpen = 1;
         } else {
             //关闭微信二维码
-            $("#contact_weChat_div").css({"height": "0px"});
+            $("#contact_weChat_div").animate({height:'0px'},500);
+            $("#contact_weChat_div").css({"transform": "scale(0.0)"});
             WechatPicOpen = 0;
         }
     }, 300);
@@ -150,12 +157,14 @@ function douYinCLick(divInfo) {
     }
     setTimeout(() => {
         if (DouYinPicOpen == 0) {
-            //打开微信二维码
-            $("#contact_DouYin_div").css({"height": "340px"});
+            //打开抖音二维码
+            $("#contact_DouYin_div").animate({height:'340px'},500);
+            $("#contact_DouYin_div").css({"transform": "scale(1.0)"});
             DouYinPicOpen = 1;
         } else {
-            //关闭微信二维码
-            $("#contact_DouYin_div").css({"height": "0px"});
+            //关闭抖音二维码
+            $("#contact_DouYin_div").animate({height:'0px'},500);
+            $("#contact_DouYin_div").css({"transform": "scale(0.0)"});
             DouYinPicOpen = 0;
         }
     }, 300);
@@ -171,15 +180,9 @@ function jumpToBiliBililAndAnmite(divInfo) {
 
 function douDong(divInfo) {
     $(divInfo).css("transform", "translateY(-2vw)");
-    // $(divInfo).css("-webkit-transform", "translateY(-2vw)");
-    $(divInfo).css("transition-duration", "0.1s");
-    // $(divInfo).css("-webkit-transition-duration", "0.1s");
-    $(divInfo).css("transition-timing-function", "ease-out");
-    // $(divInfo).css("-webkit-transition-timing-function", "ease-out");
+    $(divInfo).children(".address_img").css("transform", "translateY(-2vw)");
     setTimeout(() => {
         $(divInfo).css("transform", "translateY(0vw)");
-        // $(divInfo).css("-webkit-transform", "translateY(0vw)");
-        $(divInfo).css("transition-duration", "0.1s");
-        // $(divInfo).css("-webkit-transition-duration", "0.1s");
+        $(divInfo).children(".address_img").css("transform", "translateY(0vw)");
     }, 100);
 }

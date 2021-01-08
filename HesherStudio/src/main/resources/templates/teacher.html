@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="css/teacher.css" type="text/css">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
-    <link href="css/teacher_moble.css" rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)">
-    <link href="css/teacher_web.css" rel="stylesheet" type="text/css" media="screen and (min-width: 1024px)">
+<!--    <link href="css/teacher_moble.css" rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)">-->
+<!--    <link href="css/teacher_web.css" rel="stylesheet" type="text/css" media="screen and (min-width: 1024px)">-->
+    <link href="css/teacher_moble.css" rel="stylesheet" type="text/css" media="all and (orientation:portrait)">
+    <link href="css/teacher_web.css" rel="stylesheet" type="text/css" media="all and (orientation:landscape)">
     <script type="text/javascript" src="js/teacher.js"></script>
     <script type="text/javascript" src="js/Hesher_Head.js"></script>
     <script type="text/javascript" src="js/Hesher_Bottom.js"></script>
@@ -103,12 +105,9 @@
                     <div class="little_pic" id="bilibili_logo" onclick="jumpToBiBiliPage()"></div>
                     <div class="little_pic" onclick="jumpToWeiBoPage()" id="weibo_logo"></div>
                     <div class="little_pic" id="wechat_logo" onclick="openWeChatInfo();"></div>
-                    <!-- 弹出微信二维码 -->
                 </div>
-                <div id="weChatModel" class="weChatModel">
-                    <span class="weChatclose" onclick="closeWeChatPic()">&times;</span>
-                    <img class="weChatModal-content" id="weChatImg" src="pic/weChatImg.jpg">
-                    <div id="weChatInfo">微信二维码</div>
+                <div class="getWeChatPic" onclick="closeGetWeChatPic()">
+                    <div class = "getWeChatPic_pic"></div>
                 </div>
             </div>
         </div>
@@ -376,7 +375,7 @@
                 <a href="javascript:void(0)" onclick="jumpToBiBiliPage()">哔哩哔哩</a>
             </li>
             <li class="address-us-li">
-                <a href="javascript:void(0)" onclick="jumpToBiBiliPage()">微博</a>
+                <a href="javascript:void(0)" onclick="jumpToWeiBoPage()">微博</a>
             </li>
         </div>
         <!-- 版权信息 -->

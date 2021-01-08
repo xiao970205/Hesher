@@ -1,7 +1,6 @@
 function initBottomModel() {
-    var scarmWidth = $(window).width();
     //head标签
-    if (scarmWidth <= 1024) {
+    if (window.orientation==180||window.orientation==0) {
         $("#bottom-main").css("background-position", "center center");
         $("#bottom-main").css("height", "400px");
         $("#bottom-logo-img").css("width", "85px");
@@ -38,7 +37,25 @@ $(document).ready(function () {
  * 需要header模块,弹出微信二维码
  */
 function openWeChatInfo() {
-    document.getElementById('weChatModel').style.display = "block";
+    $("body").css("overflow-y", "hidden");
+    $("html").css("overflow-y", "hidden");
+    $(".getWeChatPic").css("transform","translateX(0vw)");
+    if (window.orientation==180||window.orientation==0) {
+        $(".getWeChatPic_pic").css("width","70vw");
+        $(".getWeChatPic_pic").css("height","70vw");
+    }else{
+        $(".getWeChatPic_pic").css("width","400px");
+        $(".getWeChatPic_pic").css("height","400px");
+    }
+    setTimeout(()=>{
+        $(".getWeChatPic_pic").css("transform","scale(1.0)");
+    },500);
+}
+function closeGetWeChatPic(){
+    $(".getWeChatPic_pic").css("transform","scale(0.0)");
+    setTimeout(()=>{
+        $(".getWeChatPic").css("transform","translateX(-100vw)");
+    },500);
 }
 function retrunToTop() {
     $("html,body").animate({scrollTop:'0'},500);

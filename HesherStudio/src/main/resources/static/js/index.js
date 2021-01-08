@@ -1,10 +1,40 @@
-// window.onresize = function () {
-//     initPage();
-// }
+//判断横屏竖屏 1为横屏，2为竖屏
+var orientationSize;
+function  getorientationSize() {
+    var u = navigator.userAgent;
+    var o = window.orientation;
+    if(u.indexOf("Android")!=-1){
+        if(o == 90|| o == -90){
+            return 1;
+        }else {
+            return 2;
+        }
+    }else if(u.indexOf("iPhone")!=-1){
+        if(o == 90|| o == -90){
+            return 1;
+        }else {
+            return 2;
+        }
+    }else if(u.indexOf("Macintosh")!=-1){
+        if(o == 90|| o == -90){
+            return 1;
+        }else {
+            return 2;
+        }
+    }else {
+        if(o == 90|| o == -90){
+            return 2;
+        }else {
+            return 1;
+        }
+    }
+}
 
+$(window).bind( 'orientationchange', function(e){
+    location.reload();
+});
 //初始化方法
 function initPage() {
-
     initHeaderModel();
     initVideoDiv();
     initNews();
@@ -49,8 +79,25 @@ function getHsonLength(json){
     }
     return jsonLength;
 }
-
+var os = function (){
+    var ua = navigator.userAgent,
+        isWindowsPhone = /(?:Windows Phone)/.test(ua),
+        isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+        isAndroid = /(?:Android)/.test(ua),
+        isFireFox = /(?:Firefox)/.test(ua),
+        isChrome = /(?:Chrome|CriOS)/.test(ua),
+        isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),
+        isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+        isPc = !isPhone && !isAndroid && !isSymbian;
+    return {
+        isTablet: isTablet,
+        isPhone: isPhone,
+        isAndroid: isAndroid,
+        isPc: isPc
+    };
+}();
 function initNews() {
+    orientationSize = getorientationSize();
     $.ajax({
         url: "/getTeacherRunInfo",
         type: "get",
@@ -63,17 +110,14 @@ function initNews() {
         alert("教师人数不足4！请联系管理员！");
         return;
     }
-
-    if ($(window).width() <= 1024) {
-        piclist = [userJsonArray[0].picMoblie,userJsonArray[1].picMoblie,userJsonArray[2].picMoblie,userJsonArray[3].picMoblie];
-        // piclist = ['top_AE295LGS_sp.jpg', 'rotating-banner-sp-rg5170g.jpg', 'top_BTB1936_sp.jpg', 'top_RG60ALS_sp.jpg'];
-    } else {
-        // piclist = ['top_AE295LGS.jpg', 'rotating-banner-rg5170gsvf.jpg', 'top_BTB1936.jpg', 'top_RG60ALS.jpg'];
+    if(orientationSize == 1){
         piclist = [userJsonArray[0].picWeb,userJsonArray[1].picWeb,userJsonArray[2].picWeb,userJsonArray[3].picWeb];
         $("#news_bottom_0").css({"background": "url(../pic/" + piclist[0] + ") no-repeat", "background-size": "cover"});
         $("#news_bottom_1").css({"background": "url(../pic/" + piclist[1] + ") no-repeat", "background-size": "cover"});
         $("#news_bottom_2").css({"background": "url(../pic/" + piclist[2] + ") no-repeat", "background-size": "cover"});
         $("#news_bottom_3").css({"background": "url(../pic/" + piclist[3] + ") no-repeat", "background-size": "cover"});
+    } else {
+        piclist = [userJsonArray[0].picMoblie,userJsonArray[1].picMoblie,userJsonArray[2].picMoblie,userJsonArray[3].picMoblie];
     }
     $("#news-pic").css({
         "background": "url(../pic/" + piclist[3] + ") no-repeat",

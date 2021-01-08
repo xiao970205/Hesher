@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="css/Hesher_Address.css" type="text/css">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
-    <link href="css/index_moble.css" rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)">
-    <link href="css/index.css" rel="stylesheet" type="text/css" media="screen and (min-width: 1024px)">
+    <link href="css/index_moble.css" rel="stylesheet" type="text/css" media="all and (orientation:portrait)">
+    <link href="css/index.css" rel="stylesheet" type="text/css" media="all and (orientation:landscape)">
+<!--    <link rel="stylesheet" media="all and (orientation:landscape)" href="css/index.css" rel="external nofollow" >-->
+<!--    <link rel="stylesheet" media="all and (orientation:portrait)" href="css/index_moble.css" rel="external nofollow" >-->
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/Hesher_Head.js"></script>
     <script type="text/javascript" src="js/Hesher_Bottom.js"></script>
@@ -74,11 +76,13 @@
                 </div>
                 <!--手机端 -->
                 <div id="left_menu_moble" style="display: none">
-                    <div style="height: 80px;width: 100vw;position: absolute;top: 0;left: 0;border-bottom: 1px solid rgb(77,77,77)">
+                    <div style="width: 100vw;height: 100vh;" onclick="openOrCloseLeftMenu()">
+                        <div style="height: 80px;width: 100vw;position: absolute;top: 0;left: 0;border-bottom: 1px solid rgb(77,77,77)">
                         <div style="position: absolute;padding-left: 16px;padding-top: 20px;width: 40px;height: 40px;cursor: pointer;"
                              onclick="openOrCloseLeftMenu()"></div>
+                        </div>
+                        <div id="left_menu_moble_0">
                     </div>
-                    <div id="left_menu_moble_0">
                     </div>
                 </div>
             </div>
@@ -99,11 +103,8 @@
                     <div class="little_pic" id="bilibili_logo" onclick="jumpToBiBiliPage()"></div>
                     <div class="little_pic" onclick="jumpToWeiBoPage()" id="weibo_logo"></div>
                     <div class="little_pic" id="wechat_logo" onclick="openWeChatInfo();"></div>
-                    <!-- 弹出微信二维码 -->
-                    <div id="weChatModel" class="weChatModel">
-                        <span class="weChatclose" onclick="closeWeChatPic()">&times;</span>
-                        <img class="weChatModal-content" id="weChatImg" src="pic/weChatImg.jpg">
-                        <div id="weChatInfo">微信二维码</div>
+                    <div class="getWeChatPic" onclick="closeGetWeChatPic()">
+                        <div class = "getWeChatPic_pic"></div>
                     </div>
                 </div>
             </div>
@@ -216,7 +217,6 @@
     </div>
     <div id="buttom_div">
         <div id="contact_info">
-            <!--        <div style="width: 300px;height: 136px">-->
             <div class="button_model">
                 <div class="button_model_anime" id="button_model_anime_1">
                     <div class="button_model_pic" onclick="phoneButtonClick(this)">
@@ -305,7 +305,7 @@
                 <a href="javascript:void(0)" onclick="jumpToBiBiliPage()">哔哩哔哩</a>
             </li>
             <li class="address-us-li">
-                <a href="javascript:void(0)" onclick="jumpToBiBiliPage()">微博</a>
+                <a href="javascript:void(0)" onclick="jumpToWeiBoPage()">微博</a>
             </li>
         </div>
         <div><p style=" text-align: center;color: rgb(136, 136, 136);">ICP备案号：<a href="http://beian.miit.gov.cn" target="_blank" style="text-decoration:none;color: rgb(136, 136, 136)">冀ICP备2020024928号</a></p></div>

@@ -8,7 +8,9 @@ var Info2;
 var Info3;
 var pic1;
 var pic2;
-
+$(window).bind( 'orientationchange', function(e){
+    location.reload();
+});
 //初始化方法
 function initPage() {
     getAllInfo();
@@ -47,7 +49,7 @@ function getAllInfo(){
 }
 
 function initInfoLength(){
-    if($(window).width() > 1024){
+    if(window.orientation==90||window.orientation==-90){
         return ;
     }
     var info1length = Info.length;
@@ -98,7 +100,7 @@ function jumToTeacherPageByNews() {
 }
 function teacher_info_animate(page_size) {
     var runVal = 100;
-    if($(window).width() > 1024){
+    if(window.orientation==90||window.orientation==-90){
         runVal = 50;
     }
     if("1"==page_size){
