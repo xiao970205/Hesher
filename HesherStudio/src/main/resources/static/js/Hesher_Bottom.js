@@ -1,6 +1,6 @@
 function initBottomModel() {
     //head标签
-    if (window.orientation==180||window.orientation==0) {
+    if (getorientationSize()==2) {
         $("#bottom-main").css("background-position", "center center");
         $("#bottom-main").css("height", "400px");
         $("#bottom-logo-img").css("width", "85px");
@@ -40,7 +40,7 @@ function openWeChatInfo() {
     $("body").css("overflow-y", "hidden");
     $("html").css("overflow-y", "hidden");
     $(".getWeChatPic").css("transform","translateX(0vw)");
-    if (window.orientation==180||window.orientation==0) {
+    if (getorientationSize()==2) {
         $(".getWeChatPic_pic").css("width","70vw");
         $(".getWeChatPic_pic").css("height","70vw");
     }else{
@@ -59,4 +59,34 @@ function closeGetWeChatPic(){
 }
 function retrunToTop() {
     $("html,body").animate({scrollTop:'0'},500);
+}
+
+function  getorientationSize() {
+    var u = navigator.userAgent;
+    var o = window.orientation;
+    if(u.indexOf("Android")!=-1){
+        if(o == 90|| o == -90){
+            return 1;
+        }else {
+            return 2;
+        }
+    }else if(u.indexOf("iPhone")!=-1){
+        if(o == 90|| o == -90){
+            return 1;
+        }else {
+            return 2;
+        }
+    }else if(u.indexOf("Macintosh")!=-1){
+        if(o == 90|| o == -90){
+            return 1;
+        }else {
+            return 2;
+        }
+    }else {
+        if(o == 90|| o == -90){
+            return 2;
+        }else {
+            return 1;
+        }
+    }
 }

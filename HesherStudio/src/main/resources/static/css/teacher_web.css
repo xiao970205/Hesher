@@ -180,3 +180,12 @@
     width: 18vw;
     height: 18vw;
 }
+#teacher_page_up_down_left_in_style_last{
+    height: 130px;
+}
+#teacher_page_up_down_left_in_li{
+    height: 130px;
+}
+#short_intruduce_show{
+    height: 120px;line-height: 25px;
+}

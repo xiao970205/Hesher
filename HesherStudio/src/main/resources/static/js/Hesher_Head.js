@@ -5,14 +5,6 @@ var bilibiliUrl = "https://space.bilibili.com/3113010?from=search&seid=117226972
 //头部左侧Menu信息
 var leftMenuInfo = null;
 
-// 判断横屏竖屏
-function orient() {
-    if (window.orientation == 90 || window.orientation == -90) {
-    //ipad、iphone竖屏；Andriod横屏
-    } else if (window.orientation == 0 || window.orientation == 180) {
-    //ipad、iphone横屏；Andriod竖屏
-    }
-}
 //打开哔哩哔哩
 function jumpToBiBiliPage() {
     window.open(bilibiliUrl);
@@ -23,14 +15,43 @@ function jumpToWeiBoPage() {
     window.open(weiboUrl);
 }
 
+function  getorientationSize() {
+    var u = navigator.userAgent;
+    var o = window.orientation;
+    if(u.indexOf("Android")!=-1){
+        if(o == 90|| o == -90){
+            return 1;
+        }else {
+            return 2;
+        }
+    }else if(u.indexOf("iPhone")!=-1){
+        if(o == 90|| o == -90){
+            return 1;
+        }else {
+            return 2;
+        }
+    }else if(u.indexOf("Macintosh")!=-1){
+        if(o == 90|| o == -90){
+            return 1;
+        }else {
+            return 2;
+        }
+    }else {
+        if(o == 90|| o == -90){
+            return 2;
+        }else {
+            return 1;
+        }
+    }
+}
+
 /**
  * 初始化头部
  */
 function initHeaderModel() {
-    var scarmWidth = $(window).width();
     //初始化左侧menu信息
     getMenuInfo();
-    if (window.orientation == 0 || window.orientation == 180) {
+    if (getorientationSize()==2) {
         //手机端
         //隐藏head_down部分
         $("#head_down").css("display","none");
@@ -414,7 +435,7 @@ function jumpToVideoPage(event) {
 var opacityValue = 0;
 
 $(window).scroll(function () {
-    if (window.orientation == 0 || window.orientation == 180) {
+    if (getorientationSize()==2) {
         // 手机模式
         return;
     }

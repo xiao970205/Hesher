@@ -49,7 +49,7 @@ function getAllInfo(){
 }
 
 function initInfoLength(){
-    if(window.orientation==90||window.orientation==-90){
+    if(getorientationSize()==1){
         return ;
     }
     var info1length = Info.length;
@@ -100,8 +100,11 @@ function jumToTeacherPageByNews() {
 }
 function teacher_info_animate(page_size) {
     var runVal = 100;
-    if(window.orientation==90||window.orientation==-90){
+
+    if(getorientationSize() == 1){
         runVal = 50;
+    }else{
+        runVal = 100;
     }
     if("1"==page_size){
         $("#teacher_info_pages").css("transform","translateX(0vw)");
@@ -118,5 +121,35 @@ function teacher_info_animate(page_size) {
         $("#teacher_info_dot_3").css("background-color","rgb(0,167,142)");
         $("#teacher_info_dot_1").css("background-color","rgb(0,0,0)");
         $("#teacher_info_dot_2").css("background-color","rgb(0,0,0)");
+    }
+}
+
+function  getorientationSize() {
+    var u = navigator.userAgent;
+    var o = window.orientation;
+    if(u.indexOf("Android")!=-1){
+        if(o == 90|| o == -90){
+            return 1;
+        }else {
+            return 2;
+        }
+    }else if(u.indexOf("iPhone")!=-1){
+        if(o == 90|| o == -90){
+            return 1;
+        }else {
+            return 2;
+        }
+    }else if(u.indexOf("Macintosh")!=-1){
+        if(o == 90|| o == -90){
+            return 1;
+        }else {
+            return 2;
+        }
+    }else {
+        if(o == 90|| o == -90){
+            return 2;
+        }else {
+            return 1;
+        }
     }
 }
